@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import {
    AppRegistry,
    StyleSheet,
@@ -10,15 +10,30 @@ import {
 } from 'react-native';
 
 export default class MainPage extends Component {
+
+  static propTypes = { 
+    navigator: PropTypes.object.isRequired,
+    title: PropTypes.string.isRequired
+  }
+
+  signUpClick() {
+    var nav = this.props.navigator
+    nav.replace({
+      title: 'Sign-Up Page'
+    })
+  }
+
   render() {
+
     return (
       <View style={styles.container}>
+        <Text> Title: {this.props.title} </Text>
         <View style={styles.layerOne}>
         <Text style={styles.welcome}>
           Welcome to WellCat!
         </Text>
         <TouchableNativeFeedback
-              onPress={this._onPressButton}
+              onPress={this._press}
               background={TouchableNativeFeedback.SelectableBackground()}>
             <View style={{width: 75, height: 25, backgroundColor: 'grey', margin: 2}}>
               <Text style={{textAlign: 'center'}}>Login</Text>
@@ -26,7 +41,7 @@ export default class MainPage extends Component {
         </TouchableNativeFeedback>
 
         <TouchableNativeFeedback
-              onPress={this._onPressButton}
+              onPress={this.signUpClick.bind(this)}
               background={TouchableNativeFeedback.SelectableBackground()}>
             <View style={{width: 75, height: 25, backgroundColor: 'grey', margin: 2}}>
               <Text style={{textAlign: 'center'}}>Sign-Up</Text>

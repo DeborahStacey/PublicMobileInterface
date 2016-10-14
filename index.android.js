@@ -12,16 +12,37 @@ import {
    View,
    TextInput,
    TouchableHighlight,
-   TouchableNativeFeedback
+   TouchableNativeFeedback,
+   Navigator
 } from 'react-native';
 import SignUp from './components/signup';
 import MainPage from './components/MainPage';
 
+
 class WellCat extends Component {
+
+  renderScene( route, navigator ) {
+    pageTitle = route.title;
+
+    if (pageTitle === 'Main Page') {
+      return(
+        <MainPage navigator={navigator} title="Main Page" />
+      )
+    }
+    if(pageTitle === 'Sign-Up Page') {
+      return(
+        <SignUp navigator={navigator} title="Sign-Up Page" />
+      )
+    }
+
+  }
 
   render() {
     return(
-      <MainPage />
+      <Navigator
+        initialRoute={{title: "Main Page", index: 0}}
+        renderScene={this.renderScene.bind(this)}
+      />
     );
   }
 }
