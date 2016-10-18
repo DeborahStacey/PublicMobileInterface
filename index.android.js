@@ -16,6 +16,7 @@ import {
    Navigator
 } from 'react-native';
 import SignUp from './components/signup';
+import Login from './components/login';
 import MainPage from './components/MainPage';
 
 
@@ -32,6 +33,11 @@ class WellCat extends Component {
     if(pageTitle === 'Sign-Up Page') {
       return(
         <SignUp navigator={navigator} title="Sign-Up Page" />
+      )
+    }
+    if(pageTitle === 'Login Page') {
+      return(
+        <Login navigator={navigator} title="Login Page" />
       )
     }
 

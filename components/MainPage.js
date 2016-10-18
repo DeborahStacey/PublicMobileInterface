@@ -11,7 +11,7 @@ import {
 
 export default class MainPage extends Component {
 
-  static propTypes = { 
+  static propTypes = {
     navigator: PropTypes.object.isRequired,
     title: PropTypes.string.isRequired
   }
@@ -23,17 +23,23 @@ export default class MainPage extends Component {
     })
   }
 
+  loginClick() {
+    var nav = this.props.navigator
+    nav.replace({
+      title: 'Login Page'
+    })
+  }
+
   render() {
 
     return (
       <View style={styles.container}>
-        <Text> Title: {this.props.title} </Text>
         <View style={styles.layerOne}>
         <Text style={styles.welcome}>
           Welcome to WellCat!
         </Text>
         <TouchableNativeFeedback
-              onPress={this._press}
+                onPress={this.loginClick.bind(this)}
               background={TouchableNativeFeedback.SelectableBackground()}>
             <View style={{width: 75, height: 25, backgroundColor: 'grey', margin: 2}}>
               <Text style={{textAlign: 'center'}}>Login</Text>

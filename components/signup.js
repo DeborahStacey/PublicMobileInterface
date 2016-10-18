@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 
 export default class SignUp extends Component {
-  static propTypes = { 
+  static propTypes = {
     navigator: PropTypes.object.isRequired,
     title: PropTypes.string.isRequired
   }
@@ -20,7 +20,7 @@ export default class SignUp extends Component {
     nav.replace({
       title: 'Main Page'
     })
-  }  
+  }
 
   render() {
     return (
@@ -38,19 +38,19 @@ export default class SignUp extends Component {
         <View style={styles.messageBox}>
           <View style={styles.messageBoxContents}>
             <Text>Email</Text>
-            <TextInput placeholder="Enter your name" />
+            <TextInput placeholder="Enter your email" />
           </View>
         </View>
         <View style={styles.messageBox}>
           <View style={styles.messageBoxContents}>
-            <Text>Adress</Text>
-            <TextInput placeholder="Enter your name" />
+            <Text>Address</Text>
+            <TextInput placeholder="Enter your address" />
           </View>
         </View>
         <View style={styles.messageBox}>
           <View style={styles.messageBoxContents}>
             <Text>Cat Name</Text>
-            <TextInput placeholder="Enter your name" />
+            <TextInput placeholder="Enter your cat's name" />
           </View>
         </View>
 
