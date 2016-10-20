@@ -15,8 +15,8 @@ import {
    TouchableNativeFeedback,
    Navigator
 } from 'react-native';
-import SignUp from './components/signup';
-import Login from './components/login';
+import SignUp from './components/SignUp';
+import Login from './components/Login';
 import MainPage from './components/MainPage';
 
 
