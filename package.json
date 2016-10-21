@@ -60,7 +60,8 @@
     "reactotron-react-native": "^1.1.2",
     "reactotron-redux": "^1.1.2",
     "snazzy": "^5.0.0",
-    "standard": "^8.0.0"
+    "standard": "^8.0.0",
+    "babel-preset-react-native": "^1.9.0"
   },
   "ava": {
     "files": [
@@ -74,6 +75,11 @@
       "./Tests/Setup"
     ],
     "babel": "inherit"
+  },
+  "babel": {
+    "presets": [
+      "react-native"
+    ]
   },
   "standard": {
     "parser": "babel-eslint",
