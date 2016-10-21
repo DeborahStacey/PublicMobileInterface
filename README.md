@@ -15,6 +15,7 @@
 ## :arrow_forward: How to Run App
 
 1. cd to the repo
+	1a. cd into the android folder and run (unix) ./gradlew clean (windows) gradlew clean
 2. Run Build for either OS
   * for iOS
     * run `react-native run-ios`
