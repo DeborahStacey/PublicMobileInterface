@@ -1,3 +1,10 @@
+* UPDATE 2016-10-28 
+-Removed links to test pages from front page.
+-Added Sign-Up button to the front page.
+-Sign-Up screen has all the fields for a user to signup on the system.
+	-If all of the feilds have been filled out the user account will be added to the database.
+	-If not an error will appear.
+
 * UPDATE 2016-10-21
 
 - Now using Ignite template; we've had to remove a couple of pages temporarily due to time constraints; will be re-added for next build
