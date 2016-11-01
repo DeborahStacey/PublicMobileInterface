@@ -9,8 +9,9 @@
     "fixcode": "standard --fix",
     "clean": "rm -rf $TMPDIR/react-* && watchman watch-del-all && npm cache clean",
     "newclear": "rm -rf $TMPDIR/react-* && watchman watch-del-all && rm -rf ios/build/ModuleCache/* && rm -rf node_modules/ && npm cache clean && npm i",
-    "test": "NODE_ENV=production ava",
-    "test:watch": "ava --watch",
+    "test": "jest",
+    "test:update": "jest --updateSnapshot",
+    "test:coverage": "jest --coverage",
     "coverage": "nyc ava && nyc report --reporter=html && open coverage/index.html || xdg-open coverage/index.html",
     "tron": "node_modules/.bin/reactotron",
     "android:build": "cd android && ./gradlew assembleRelease",
@@ -20,6 +21,9 @@
     "android:logcat": "$ANDROID_HOME/platform-tools/adb logcat *:S ReactNative:V ReactNativeJS:V",
     "android:shake": "$ANDROID_HOME/platform-tools/adb devices | grep '\\t' | awk '{print $1}' | sed 's/\\s//g' | xargs -I {} $ANDROID_HOME/platform-tools/adb -s {} shell input keyevent 82",
     "flow": "flow; test $? -eq 0 -o $? -eq 2"
+  },
+  "jest": {
+    "preset": "jest-react-native"
   },
   "dependencies": {
     "apisauce": "^0.5.0",
@@ -47,21 +51,25 @@
   "devDependencies": {
     "ava": "^0.16.0",
     "babel-eslint": "^7.0.0",
+    "babel-jest": "^16.0.0",
     "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react-native": "^1.9.0",
     "enzyme": "^2.3.0",
     "flow-bin": "^0.32.0",
     "ghooks": "^1.3.2",
+    "jest": "^16.0.2",
+    "jest-react-native": "^16.0.0",
     "mockery": "^1.7.0",
     "nyc": "^8.1.0",
     "react-addons-test-utils": "^15.3.1",
     "react-dom": "^15.3.1",
     "react-native-mock": "^0.2.6",
+    "react-test-renderer": "^15.3.2",
     "reactotron-apisauce": "^1.1.2",
     "reactotron-react-native": "^1.1.2",
     "reactotron-redux": "^1.1.2",
     "snazzy": "^5.0.0",
-    "standard": "^8.0.0",
-    "babel-preset-react-native": "^1.9.0"
+    "standard": "^8.0.0"
   },
   "ava": {
     "files": [
