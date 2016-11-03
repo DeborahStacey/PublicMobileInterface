@@ -28,7 +28,7 @@ export default class SignUp extends React.Component {
 
   registerUser () {
     if (this.state.email === '' || this.state.password === '' || this.state.fName === '' || this.state.lName === '' || this.state.address === '') {
-      window.alert('not all of the feilds have been filled out please enter all data!')
+      window.alert('not all of the fields have been filled out please enter all data!')
       return
     }
 

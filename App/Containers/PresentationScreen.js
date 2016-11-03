@@ -19,12 +19,16 @@ export default class PresentationScreen extends React.Component {
 
           <View style={styles.section} >
             <Text style={styles.sectionText} >
-              Our Screens so far
+              WellCat!
             </Text>
           </View>
 
           <RoundedButton onPress={NavigationActions.signUp}>
-            Sign-up
+            Sign Up
+          </RoundedButton>
+
+          <RoundedButton onPress={NavigationActions.signIn}>
+            Sign In
           </RoundedButton>
 
         </ScrollView>
