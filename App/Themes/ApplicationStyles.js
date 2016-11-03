@@ -40,7 +40,9 @@ const ApplicationStyles = {
     sectionInput: {
       color: Colors.snow,
       marginVertical: Metrics.smallMargin,
-      fontWeight: 'bold'
+      fontWeight: 'bold',
+      fontSize: 14,
+      height: 50
     },
     subtitle: {
       color: Colors.snow,
