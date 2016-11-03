@@ -32,11 +32,9 @@ export default class SignIn extends React.Component {
     var postObj = {
       'email': this.state.email,
       'password': this.state.password
-      }
-
+    }
     db.post('/user/login', postObj).then((response) => window.alert(JSON.stringify(response.data)))
   }
-
 
   updateEmail (event) {
     this.setState({
@@ -60,10 +58,10 @@ export default class SignIn extends React.Component {
             <View style={styles.messageBoxContents}>
 
               <Text style={styles.sectionText}>Email</Text>
-              <TextInput onChangeText={this.updateEmail.bind(this)} placeholder='Enter your email' />
+              <TextInput onChangeText={this.updateEmail.bind(this)} placeholder='Enter your email' placeholderTextColor='white' style={styles.sectionInput} />
 
               <Text style={styles.sectionText}>Password</Text>
-              <TextInput onChangeText={this.updatePassword.bind(this)} placeholder='Enter your password' />
+              <TextInput onChangeText={this.updatePassword.bind(this)} placeholder='Enter your password' placeholderTextColor='white' style={styles.sectionInput} />
 
             </View>
           </View>
