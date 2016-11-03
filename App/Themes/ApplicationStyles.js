@@ -37,6 +37,11 @@ const ApplicationStyles = {
       textAlign: 'center',
       fontWeight: 'bold'
     },
+    sectionInput: {
+      color: Colors.snow,
+      marginVertical: Metrics.smallMargin,
+      fontWeight: 'bold'
+    },
     subtitle: {
       color: Colors.snow,
       padding: Metrics.smallMargin,
