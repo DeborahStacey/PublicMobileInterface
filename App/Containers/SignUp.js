@@ -85,26 +85,24 @@ export default class SignUp extends React.Component {
       <View style={styles.mainContainer}>
         <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
         <ScrollView style={styles.container}>
-          <Text style={styles.sectionText}>
-            Sign Up Page
-          </Text>
 
           <View style={styles.messageBox}>
             <View style={styles.messageBoxContents}>
+
               <Text style={styles.sectionText}>First Name</Text>
-              <TextInput onChangeText={this.updateFName.bind(this)} placeholder='Enter your first name' />
+              <TextInput onChangeText={this.updateFName.bind(this)} placeholder='Enter your first name' placeholderTextColor='white' style={styles.sectionInput} />
 
               <Text style={styles.sectionText}>Last Name</Text>
-              <TextInput onChangeText={this.updateLName.bind(this)} placeholder='Enter your last name' />
+              <TextInput onChangeText={this.updateLName.bind(this)} placeholder='Enter your last name' placeholderTextColor='white' style={styles.sectionInput} />
 
               <Text style={styles.sectionText}>Email</Text>
-              <TextInput onChangeText={this.updateEmail.bind(this)} placeholder='Enter your email' />
+              <TextInput onChangeText={this.updateEmail.bind(this)} placeholder='Enter your email' placeholderTextColor='white' style={styles.sectionInput} />
 
               <Text style={styles.sectionText}>Password</Text>
-              <TextInput onChangeText={this.updatePassword.bind(this)} placeholder='Enter your password' />
+              <TextInput onChangeText={this.updatePassword.bind(this)} placeholder='Enter your password' placeholderTextColor='white' style={styles.sectionInput} />
 
               <Text style={styles.sectionText}>Address</Text>
-              <TextInput onChangeText={this.updateAddress.bind(this)} placeholder='Enter your address' />
+              <TextInput onChangeText={this.updateAddress.bind(this)} placeholder='Enter your address' placeholderTextColor='white' style={styles.sectionInput} />
 
             </View>
           </View>
