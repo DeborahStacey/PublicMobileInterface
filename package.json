@@ -98,7 +98,9 @@
       "navigator",
       "__DEV__",
       "XMLHttpRequest",
-      "FormData"
+      "FormData",
+      "jest",
+      "expect"
     ]
   },
   "config": {
