@@ -1,8 +1,3 @@
-* UPDATE 2016-11-04
-- Added the add cat page
-- added the sign-in page
-- added testing to all the pages we have created
-
 * UPDATE 2016-10-28 
 - Removed links to test pages from front page.
 - Added Sign-Up button to the front page.
