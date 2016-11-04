@@ -1,12 +1,10 @@
 import React from 'react'
-import { ScrollView, Text, Image, View, TextInput, Modal } from 'react-native'
+import { ScrollView, Text, Image, View, TextInput } from 'react-native'
 import { Images } from '../Themes'
 import RoundedButton from '../Components/RoundedButton'
 import DropDown from '../Components/DropDown'
 // import { Actions as NavigationActions } from 'react-native-router-flux'
 import {create} from 'apisauce'
-import Calendar from 'react-native-calendar-datepicker'
-import Moment from 'moment'
 
 // Styles
 import styles from './Styles/PresentationScreenStyle'
@@ -24,14 +22,12 @@ export default class AddCat extends React.Component {
       name: '',
       breed: 0,
       gender: 0,
-      dob: 'Not yet set...',
-      selectedDate: Moment().now,
+      dob: '',
       weight: '',
       height: '',
       length: '',
       breeds: {},
-      genders: {},
-      modalVisible: false
+      genders: {}
     }
   }
 
@@ -83,7 +79,7 @@ export default class AddCat extends React.Component {
 
   updateName (event) {
     this.setState({
-      name: event
+      fName: event
     })
   }
 
@@ -100,11 +96,8 @@ export default class AddCat extends React.Component {
   }
 
   updateDateOfBirth (event) {
-    var formattedDate = Moment(event).format('YYYY-MM-DD')
     this.setState({
-      dob: formattedDate,
-      selectedDate: event,
-      modalVisible: false
+      dob: event
     })
   }
 
@@ -126,12 +119,6 @@ export default class AddCat extends React.Component {
     })
   }
 
-  setModalVisible (visible) {
-    this.setState({
-      modalVisible: visible
-    })
-  }
-
   render () {
     return (
       <View style={styles.mainContainer}>
@@ -149,22 +136,6 @@ export default class AddCat extends React.Component {
 
               <Text style={styles.sectionText}>Gender</Text>
               <DropDown options={this.state.genders} onValueChange={this.updateGender.bind(this)} selectedValue={this.state.gender} />
-
-              <Modal animationType='none' transparent={false} visible={this.state.modalVisible} onRequestClose={() => this.setModalVisible(false)}>
-                <Calendar
-                  startStage='year'
-                  onChange={this.updateDateOfBirth.bind(this)}
-                  selected={this.state.selectedDate}
-                  // We use Moment.js to give the minimum and maximum dates.
-                  minDate={Moment().subtract(25, 'years')}
-                  maxDate={Moment().add(1, 'month').startOf('day')}
-                />
-              </Modal>
-
-              <Text style={styles.sectionText}>Date of Birth</Text>
-              <RoundedButton onPress={this.setModalVisible.bind(this, true)}>
-                {this.state.dob}
-              </RoundedButton>
 
               <Text style={styles.sectionText}>Weight</Text>
               <TextInput onChangeText={this.updateWeight.bind(this)} placeholder='Enter your cats weight' placeholderTextColor='white' style={styles.sectionInput} />
