@@ -19,9 +19,17 @@ const ApplicationStyles = {
       bottom: 0,
       right: 0
     },
+    profileImage: {
+      width: 126,
+      height: 126,
+      borderRadius: 63
+    },
     container: {
       flex: 1,
       paddingTop: Metrics.baseMargin
+    },
+    centered: {
+      alignItems: 'center'
     },
     section: {
       margin: Metrics.section,
