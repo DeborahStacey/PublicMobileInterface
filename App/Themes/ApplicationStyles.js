@@ -45,6 +45,19 @@ const ApplicationStyles = {
       textAlign: 'center',
       fontWeight: 'bold'
     },
+    infoTitleText: {
+      color: Colors.snow,
+      marginVertical: Metrics.smallMargin,
+      textAlign: 'left',
+      fontWeight: 'bold',
+      fontSize: 24
+    },
+    infoText: {
+      color: Colors.snow,
+      marginVertical: Metrics.smallMargin,
+      textAlign: 'left',
+      fontSize: 18
+    },
     sectionInput: {
       color: Colors.snow,
       marginVertical: Metrics.smallMargin,
