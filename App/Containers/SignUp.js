@@ -79,6 +79,10 @@ export default class SignUp extends React.Component {
       address: event
     })
   }
+  
+  focusNextField = (nextField) => {
+    this.refs[nextField].focus()
+  }
 
   render () {
     return (
@@ -90,19 +94,19 @@ export default class SignUp extends React.Component {
             <View style={styles.messageBoxContents}>
 
               <Text style={styles.sectionText}>First Name</Text>
-              <TextInput onChangeText={this.updateFName.bind(this)} placeholder='Enter your first name' placeholderTextColor='white' style={styles.sectionInput} />
+              <TextInput ref="1" onSubmitEditing={() => this.focusNextField('2')} returnKeyType="next" onChangeText={this.updateFName.bind(this)} placeholder='Enter your first name' placeholderTextColor='white' style={styles.sectionInput} />
 
               <Text style={styles.sectionText}>Last Name</Text>
-              <TextInput onChangeText={this.updateLName.bind(this)} placeholder='Enter your last name' placeholderTextColor='white' style={styles.sectionInput} />
+              <TextInput ref="2" onSubmitEditing={() => this.focusNextField('3')} returnKeyType="next" onChangeText={this.updateLName.bind(this)} placeholder='Enter your last name' placeholderTextColor='white' style={styles.sectionInput} />
 
               <Text style={styles.sectionText}>Email</Text>
-              <TextInput onChangeText={this.updateEmail.bind(this)} placeholder='Enter your email' placeholderTextColor='white' style={styles.sectionInput} />
+              <TextInput ref="3" onSubmitEditing={() => this.focusNextField('4')} returnKeyType="next" onChangeText={this.updateEmail.bind(this)} placeholder='Enter your email' placeholderTextColor='white' style={styles.sectionInput} keyboardType="email-address" />
 
               <Text style={styles.sectionText}>Password</Text>
-              <TextInput onChangeText={this.updatePassword.bind(this)} placeholder='Enter your password' placeholderTextColor='white' style={styles.sectionInput} />
+              <TextInput ref="4" onSubmitEditing={() => this.focusNextField('5')} returnKeyType="next" onChangeText={this.updatePassword.bind(this)} placeholder='Enter your password' placeholderTextColor='white' style={styles.sectionInput} secureTextEntry={true} />
 
               <Text style={styles.sectionText}>Address</Text>
-              <TextInput onChangeText={this.updateAddress.bind(this)} placeholder='Enter your address' placeholderTextColor='white' style={styles.sectionInput} />
+              <TextInput ref="5" onSubmitEditing={this.registerUser.bind(this)} returnKeyType="done" onChangeText={this.updateAddress.bind(this)} placeholder='Enter your address' placeholderTextColor='white' style={styles.sectionInput}  />
 
             </View>
           </View>

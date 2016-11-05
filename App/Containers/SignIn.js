@@ -47,6 +47,10 @@ export default class SignIn extends React.Component {
       password: event
     })
   }
+  
+  focusNextField = (nextField) => {
+    this.refs[nextField].focus()
+  }
 
   render () {
     return (
@@ -58,10 +62,10 @@ export default class SignIn extends React.Component {
             <View style={styles.messageBoxContents}>
 
               <Text style={styles.sectionText}>Email</Text>
-              <TextInput onChangeText={this.updateEmail.bind(this)} placeholder='Enter your email' placeholderTextColor='white' style={styles.sectionInput} />
+              <TextInput ref="1" onSubmitEditing={() => this.focusNextField('2')} returnKeyType="next" onChangeText={this.updateEmail.bind(this)} placeholder='Enter your email' placeholderTextColor='white' style={styles.sectionInput} keyboardType="email-address" />
 
               <Text style={styles.sectionText}>Password</Text>
-              <TextInput onChangeText={this.updatePassword.bind(this)} placeholder='Enter your password' placeholderTextColor='white' style={styles.sectionInput} />
+              <TextInput ref="2" onSubmitEditing={this.signInUser.bind(this)} returnKeyType="done" onChangeText={this.updatePassword.bind(this)} placeholder='Enter your password' placeholderTextColor='white' style={styles.sectionInput} secureTextEntry={true} />
 
             </View>
           </View>
