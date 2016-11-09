@@ -43,6 +43,10 @@ export default class PresentationScreen extends React.Component {
             Cat Info
           </RoundedButton>
 
+          <RoundedButton onPress={NavigationActions.catList}>
+            My Cats
+          </RoundedButton>
+
         </ScrollView>
       </View>
     )
