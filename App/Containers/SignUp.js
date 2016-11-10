@@ -9,7 +9,7 @@ import {create} from 'apisauce'
 import styles from './Styles/PresentationScreenStyle'
 
 const db = create({
-  baseURL: 'http://cat.ddns.net/Backend/api.php',
+  baseURL: 'https://cat.ddns.net/Backend/api.php',
   headers: {'Content-Type': 'application/json'}
 })
 
@@ -79,7 +79,7 @@ export default class SignUp extends React.Component {
       address: event
     })
   }
-  
+
   focusNextField = (nextField) => {
     this.refs[nextField].focus()
   }
