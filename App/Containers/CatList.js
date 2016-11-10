@@ -9,7 +9,7 @@ import {create} from 'apisauce'
 import styles from './Styles/PresentationScreenStyle'
 
 const db = create({
-  baseURL: 'http://cat.ddns.net/Backend/api.php',
+  baseURL: 'https://cat.ddns.net/Backend/api.php',
   headers: {'Content-Type': 'application/json'}
 })
 
@@ -23,8 +23,6 @@ export default class CatList extends React.Component {
   }
 
   componentWillMount () {
-    // TODO Make this pull Owners cats
-
     // creating a var for this inside of the promisses
     var that = this
 
