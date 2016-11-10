@@ -1,14 +1,38 @@
-* UPDATE 2016-10-28 
-- Removed links to test pages from front page.
-- Added Sign-Up button to the front page.
-- Sign-Up screen has all the fields for a user to signup on the system.
-	- If all of the feilds have been filled out the user account will be added to the database.
-	- If not an error will appear.
+# WellCat Public Mobile Interface
 
-* UPDATE 2016-10-21
+## Running
 
-- Now using Ignite template; we've had to remove a couple of pages temporarily due to time constraints; will be re-added for next build
-  - Blame midterms
-- `npm install` will need to be run before buildding
-- If running the `react-native run-android` causes an error, run `cd android && ./gradlew clean`; then cd back to the root project directory and run the first command again
-- If you still get an error, run `chmod u+x android/gradlew` and try again
+- Checkout master branch of repo
+- Run `npm install` to install required packages; this may take a while
+
+### iOS Emulator
+
+- Ensure that you have XCode developer tools installed; you'll need this to run in an emulator
+- Running `react-native run-ios` should automatically open the emulator with the app in it
+
+### Android Emulator
+
+- Ensure that you have Android developer tools installed (**you do not need to install Android Studio**, but you may choose to)
+- Follow the online instructions to create an Android image; we are targeting Android API level 23 (Android 6.0)
+- Run the Android emulator with your image
+- Run `react-native run-android` to run the app on your emulator
+	- If you have problems running at this step, check that you have permissions to execute the file `android/gradlew` file: `chmod u+x android/gradlew`
+	- If execution still fails try the following, and run the program again (we don't know why, it's magic):
+
+	```
+	cd android
+	./gradlew clean
+	cd ..
+	```
+
+### Running on Your Device
+
+- Leaving this to people who are actually able to run on their devices to fill out
+
+## Running Jest Tests
+
+To run Jest tests: `npm test`
+
+To update snapshots after changing a file: `npm run test:update`
+
+To view coverage: `npm run test:coverage` (this feature is seriously fantastic)
