@@ -24,9 +24,9 @@ class NavigationRouter extends Component {
       <Router>
         <Scene key='drawer' component={NavigationDrawer} open={false}>
           <Scene key='drawerChildrenWrapper' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} leftButtonIconStyle={Styles.leftButton} rightButtonTextStyle={Styles.rightButton}>
-            <Scene initial key='presentationScreen' component={PresentationScreen} title='WellCat' renderLeftButton={NavItems.hamburgerButton} />
+            <Scene key='presentationScreen' component={PresentationScreen} title='WellCat' renderLeftButton={NavItems.hamburgerButton} />
             <Scene key='signUp' component={SignUp} title='Sign-Up' />
-            <Scene key='signIn' component={SignIn} title='Sign In' />
+            <Scene initial key='signIn' component={SignIn} title='WellCat' />
             <Scene key='addCat' component={AddCat} title='Add Cat' />
             <Scene key='accountInfo' component={AccountInfo} title='Account Info' />
             <Scene key='catInfo' component={CatInfo} title='Cat Info' />
