@@ -6,16 +6,6 @@ import NavItems from './NavItems'
 
 // screens identified by the router
 import PresentationScreen from '../Containers/PresentationScreen'
-/* import AllComponentsScreen from '../Containers/AllComponentsScreen'
-import UsageExamplesScreen from '../Containers/UsageExamplesScreen'
-import LoginScreen from '../Containers/LoginScreen'
-import ListviewExample from '../Containers/ListviewExample'
-import ListviewGridExample from '../Containers/ListviewGridExample'
-import ListviewSectionsExample from '../Containers/ListviewSectionsExample'
-import MapviewExample from '../Containers/MapviewExample'
-import APITestingScreen from '../Containers/APITestingScreen'
-import ThemeScreen from '../Containers/ThemeScreen'
-import DeviceInfoScreen from '../Containers/DeviceInfoScreen' */
 import SignUp from '../Containers/SignUp'
 
 import SignIn from '../Containers/SignIn'
@@ -41,16 +31,6 @@ class NavigationRouter extends Component {
             <Scene key='accountInfo' component={AccountInfo} title='Account Info' />
             <Scene key='catInfo' component={CatInfo} title='Cat Info' />
             <Scene key='catList' component={CatList} title='Cat List' />
-            {/* <Scene key='componentExamples' component={AllComponentsScreen} title='Components' />
-            <Scene key='usageExamples' component={UsageExamplesScreen} title='Usage' rightTitle='Example' onRight={() => window.alert('Example Pressed')} />
-            <Scene key='login' component={LoginScreen} title='Login' hideNavBar />
-            <Scene key='listviewExample' component={ListviewExample} title='Listview Example' />
-            <Scene key='listviewGridExample' component={ListviewGridExample} title='Listview Grid' />
-            <Scene key='listviewSectionsExample' component={ListviewSectionsExample} title='Listview Sections' />
-            <Scene key='mapviewExample' component={MapviewExample} title='Mapview Example' />
-            <Scene key='apiTesting' component={APITestingScreen} title='API Testing' />
-            <Scene key='theme' component={ThemeScreen} title='Theme' />
-            <Scene key='deviceInfo' component={DeviceInfoScreen} title='Device Info' /> */}
           </Scene>
         </Scene>
       </Router>
