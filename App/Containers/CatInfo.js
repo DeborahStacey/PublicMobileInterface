@@ -10,7 +10,7 @@ import { Actions as NavigationActions } from 'react-native-router-flux'
 import styles from './Styles/PresentationScreenStyle'
 
 const db = create({
-  baseURL: 'http://cat.ddns.net/Backend/api.php',
+  baseURL: 'https://cat.ddns.net/Backend/api.php',
   headers: {'Content-Type': 'application/json'}
 })
 
@@ -45,7 +45,7 @@ export default class CatInfo extends React.Component {
 
               <View style={styles.centered}>
                 <Image source={require('../Images/datCat.png')} style={styles.profileImage} />
-              </View> 
+              </View>
 
               <Text style={styles.infoTitleText}>Name</Text>
               <Text style={styles.infoText}>Fluffy</Text>

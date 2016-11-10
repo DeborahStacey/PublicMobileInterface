@@ -11,7 +11,7 @@ import Button from 'react-native-button'
 import styles from './Styles/PresentationScreenStyle'
 
 const db = create({
-  baseURL: 'http://cat.ddns.net/Backend/api.php',
+  baseURL: 'https://cat.ddns.net/Backend/api.php',
   headers: {'Content-Type': 'application/json'}
 })
 
