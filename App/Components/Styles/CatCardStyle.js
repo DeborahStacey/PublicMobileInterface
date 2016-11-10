@@ -3,12 +3,29 @@
 import { StyleSheet } from 'react-native'
 
 export default StyleSheet.create({
-  catCard: {
+  catCardMale: {
     flexDirection: 'column',
     flexWrap: 'wrap',
     borderRadius: 5,
     borderWidth: 2,
-    borderColor: 'grey'
+    borderColor: 'grey',
+    backgroundColor: 'blue'
+  },
+  catCardFemale: {
+    flexDirection: 'column',
+    flexWrap: 'wrap',
+    borderRadius: 5,
+    borderWidth: 2,
+    borderColor: 'grey',
+    backgroundColor: '#ac00e0'
+  },
+  catCardOther: {
+    flexDirection: 'column',
+    flexWrap: 'wrap',
+    borderRadius: 5,
+    borderWidth: 2,
+    borderColor: 'grey',
+    backgroundColor: 'green'
   },
   innerContents: {
     flexDirection: 'row'
