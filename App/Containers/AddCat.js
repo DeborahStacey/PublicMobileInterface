@@ -22,7 +22,7 @@ export default class AddCat extends React.Component {
       name: '',
       breed: 0,
       gender: 0,
-      dob: '',
+      dob: '2016-01-01',
       weight: '',
       height: '',
       length: '',
@@ -79,7 +79,7 @@ export default class AddCat extends React.Component {
 
   updateName (event) {
     this.setState({
-      fName: event
+      name: event
     })
   }
 
