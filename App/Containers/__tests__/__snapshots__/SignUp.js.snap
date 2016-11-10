@@ -46,8 +46,10 @@ exports[`test renders correctly 1`] = `
         </Text>
         <TextInput
           onChangeText={[Function]}
+          onSubmitEditing={[Function]}
           placeholder="Enter your first name"
           placeholderTextColor="white"
+          returnKeyType="next"
           style={
             Object {
               "color": "white",
@@ -73,8 +75,10 @@ exports[`test renders correctly 1`] = `
         </Text>
         <TextInput
           onChangeText={[Function]}
+          onSubmitEditing={[Function]}
           placeholder="Enter your last name"
           placeholderTextColor="white"
+          returnKeyType="next"
           style={
             Object {
               "color": "white",
@@ -99,9 +103,12 @@ exports[`test renders correctly 1`] = `
           Email
         </Text>
         <TextInput
+          keyboardType="email-address"
           onChangeText={[Function]}
+          onSubmitEditing={[Function]}
           placeholder="Enter your email"
           placeholderTextColor="white"
+          returnKeyType="next"
           style={
             Object {
               "color": "white",
@@ -127,8 +134,11 @@ exports[`test renders correctly 1`] = `
         </Text>
         <TextInput
           onChangeText={[Function]}
+          onSubmitEditing={[Function]}
           placeholder="Enter your password"
           placeholderTextColor="white"
+          returnKeyType="next"
+          secureTextEntry={true}
           style={
             Object {
               "color": "white",
@@ -154,8 +164,10 @@ exports[`test renders correctly 1`] = `
         </Text>
         <TextInput
           onChangeText={[Function]}
+          onSubmitEditing={[Function]}
           placeholder="Enter your address"
           placeholderTextColor="white"
+          returnKeyType="done"
           style={
             Object {
               "color": "white",

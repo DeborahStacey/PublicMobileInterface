@@ -30,6 +30,22 @@ exports[`test renders correctly 1`] = `
       style={undefined}>
       <View
         style={undefined}>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+            }
+          }>
+          <Image
+            source={1}
+            style={
+              Object {
+                "borderRadius": 63,
+                "height": 126,
+                "width": 126,
+              }
+            } />
+        </View>
         <Text
           accessible={true}
           allowFontScaling={true}
@@ -37,26 +53,14 @@ exports[`test renders correctly 1`] = `
           style={
             Object {
               "color": "white",
+              "fontSize": 24,
               "fontWeight": "bold",
               "marginVertical": 5,
-              "textAlign": "center",
+              "textAlign": "left",
             }
           }>
           Name
         </Text>
-        <TextInput
-          onChangeText={[Function]}
-          placeholder="Enter your cats name"
-          placeholderTextColor="white"
-          style={
-            Object {
-              "color": "white",
-              "fontSize": 14,
-              "fontWeight": "bold",
-              "height": 50,
-              "marginVertical": 5,
-            }
-          } />
         <Text
           accessible={true}
           allowFontScaling={true}
@@ -64,48 +68,28 @@ exports[`test renders correctly 1`] = `
           style={
             Object {
               "color": "white",
+              "fontSize": 18,
+              "marginVertical": 5,
+              "textAlign": "left",
+            }
+          }>
+          Fluffy
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 24,
               "fontWeight": "bold",
               "marginVertical": 5,
-              "textAlign": "center",
+              "textAlign": "left",
             }
           }>
           Breed
         </Text>
-        <View
-          style={
-            Object {
-              "borderColor": "grey",
-              "borderRadius": 20,
-              "borderWidth": 2,
-              "flexDirection": "row",
-              "flexWrap": "wrap",
-              "zIndex": 99,
-            }
-          }>
-          <Picker
-            itemStyle={
-              Object {
-                "color": "white",
-              }
-            }
-            onValueChange={[Function]}
-            selectedValue={0}
-            style={
-              Object {
-                "flexGrow": 95,
-              }
-            } />
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Object {
-                "flexGrow": 5,
-                "paddingTop": 13,
-              }
-            } />
-        </View>
         <Text
           accessible={true}
           allowFontScaling={true}
@@ -113,48 +97,28 @@ exports[`test renders correctly 1`] = `
           style={
             Object {
               "color": "white",
+              "fontSize": 18,
+              "marginVertical": 5,
+              "textAlign": "left",
+            }
+          }>
+          Maine Coon
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 24,
               "fontWeight": "bold",
               "marginVertical": 5,
-              "textAlign": "center",
+              "textAlign": "left",
             }
           }>
           Gender
         </Text>
-        <View
-          style={
-            Object {
-              "borderColor": "grey",
-              "borderRadius": 20,
-              "borderWidth": 2,
-              "flexDirection": "row",
-              "flexWrap": "wrap",
-              "zIndex": 99,
-            }
-          }>
-          <Picker
-            itemStyle={
-              Object {
-                "color": "white",
-              }
-            }
-            onValueChange={[Function]}
-            selectedValue={0}
-            style={
-              Object {
-                "flexGrow": 95,
-              }
-            } />
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Object {
-                "flexGrow": 5,
-                "paddingTop": 13,
-              }
-            } />
-        </View>
         <Text
           accessible={true}
           allowFontScaling={true}
@@ -162,26 +126,28 @@ exports[`test renders correctly 1`] = `
           style={
             Object {
               "color": "white",
+              "fontSize": 18,
+              "marginVertical": 5,
+              "textAlign": "left",
+            }
+          }>
+          Male
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 24,
               "fontWeight": "bold",
               "marginVertical": 5,
-              "textAlign": "center",
+              "textAlign": "left",
             }
           }>
           Weight
         </Text>
-        <TextInput
-          onChangeText={[Function]}
-          placeholder="Enter your cats weight"
-          placeholderTextColor="white"
-          style={
-            Object {
-              "color": "white",
-              "fontSize": 14,
-              "fontWeight": "bold",
-              "height": 50,
-              "marginVertical": 5,
-            }
-          } />
         <Text
           accessible={true}
           allowFontScaling={true}
@@ -189,26 +155,28 @@ exports[`test renders correctly 1`] = `
           style={
             Object {
               "color": "white",
+              "fontSize": 18,
+              "marginVertical": 5,
+              "textAlign": "left",
+            }
+          }>
+          15 lbs
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 24,
               "fontWeight": "bold",
               "marginVertical": 5,
-              "textAlign": "center",
+              "textAlign": "left",
             }
           }>
           Height
         </Text>
-        <TextInput
-          onChangeText={[Function]}
-          placeholder="Enter your cats height"
-          placeholderTextColor="white"
-          style={
-            Object {
-              "color": "white",
-              "fontSize": 14,
-              "fontWeight": "bold",
-              "height": 50,
-              "marginVertical": 5,
-            }
-          } />
         <Text
           accessible={true}
           allowFontScaling={true}
@@ -216,26 +184,42 @@ exports[`test renders correctly 1`] = `
           style={
             Object {
               "color": "white",
+              "fontSize": 18,
+              "marginVertical": 5,
+              "textAlign": "left",
+            }
+          }>
+          20 cm
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 24,
               "fontWeight": "bold",
               "marginVertical": 5,
-              "textAlign": "center",
+              "textAlign": "left",
             }
           }>
           Length
         </Text>
-        <TextInput
-          onChangeText={[Function]}
-          placeholder="Enter your cats length"
-          placeholderTextColor="white"
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
           style={
             Object {
               "color": "white",
-              "fontSize": 14,
-              "fontWeight": "bold",
-              "height": 50,
+              "fontSize": 18,
               "marginVertical": 5,
+              "textAlign": "left",
             }
-          } />
+          }>
+          50 cm
+        </Text>
       </View>
     </View>
     <View
@@ -276,7 +260,7 @@ exports[`test renders correctly 1`] = `
             "textAlign": "center",
           }
         }>
-        REGISTER
+        VIEW OWNER
       </Text>
     </View>
   </ScrollView>

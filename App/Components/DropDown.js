@@ -38,7 +38,7 @@ export default class DropDown extends React.Component {
   }
 
   render () {
-    if (Platform.OS==='ios') {
+    if (Platform.OS === 'ios') {
       return (
         <View style={styles.dropStyle}>
           <Picker itemStyle={styles.item} style={styles.contentsIOS} selectedValue={this.props.selectedValue} onValueChange={this.props.onValueChange}>
@@ -57,7 +57,6 @@ export default class DropDown extends React.Component {
         </View>
       )
     }
-
   }
 }
 

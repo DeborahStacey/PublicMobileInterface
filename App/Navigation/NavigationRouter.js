@@ -24,13 +24,13 @@ class NavigationRouter extends Component {
       <Router>
         <Scene key='drawer' component={NavigationDrawer} open={false}>
           <Scene key='drawerChildrenWrapper' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} leftButtonIconStyle={Styles.leftButton} rightButtonTextStyle={Styles.rightButton}>
-            <Scene initial key='signIn' component={SignIn} title='WellCat' renderLeftButton={() => false}/>
-            <Scene key='presentationScreen' component={PresentationScreen} title='WellCat' renderBackButton={() => false} renderRightButton={NavItems.hamburgerButton}/>
-            <Scene key='signUp' component={SignUp} title='Sign-Up' renderBackButton={() => false} renderRightButton={NavItems.hamburgerButton}/>
-            <Scene key='addCat' component={AddCat} title='Add Cat' renderBackButton={() => false}/>
-            <Scene key='accountInfo' component={AccountInfo} title='Account Info' renderBackButton={() => false} renderRightButton={NavItems.hamburgerButton}/>
-            <Scene key='catInfo' component={CatInfo} title='Cat Info' renderBackButton={() => false} renderRightButton={NavItems.hamburgerButton}/>
-            <Scene key='catList' component={CatList} title='Cat List' renderBackButton={() => false} renderRightButton={NavItems.hamburgerButton}/>
+            <Scene initial key='signIn' component={SignIn} title='WellCat' renderLeftButton={() => false} />
+            <Scene key='presentationScreen' component={PresentationScreen} title='WellCat' renderBackButton={() => false} renderRightButton={NavItems.hamburgerButton} />
+            <Scene key='signUp' component={SignUp} title='Sign-Up' renderBackButton={() => false} renderRightButton={NavItems.hamburgerButton} />
+            <Scene key='addCat' component={AddCat} title='Add Cat' renderBackButton={() => false} />
+            <Scene key='accountInfo' component={AccountInfo} title='Account Info' renderBackButton={() => false} renderRightButton={NavItems.hamburgerButton} />
+            <Scene key='catInfo' component={CatInfo} title='Cat Info' renderBackButton={() => false} renderRightButton={NavItems.hamburgerButton} />
+            <Scene key='catList' component={CatList} title='Cat List' renderBackButton={() => false} renderRightButton={NavItems.hamburgerButton} />
           </Scene>
         </Scene>
       </Router>

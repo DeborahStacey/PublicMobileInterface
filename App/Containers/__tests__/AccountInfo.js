@@ -1,20 +1,11 @@
 import 'react-native'
 import React from 'react'
-import SignIn from '../SignIn'
+import AccountInfo from '../AccountInfo'
 import renderer from 'react-test-renderer'
-
-jest.mock('react-native-router-flux', () => {
-  return {
-    Actions: {
-      presentationScreen: () => {},
-      signUp: () => {}
-    }
-  }
-})
 
 it('renders correctly', () => {
   const tree = renderer.create(
-    <SignIn />
+    <AccountInfo />
   ).toJSON()
   expect(tree).toMatchSnapshot()
 })

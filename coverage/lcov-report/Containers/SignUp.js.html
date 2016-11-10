@@ -20,24 +20,24 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">20% </span>
+        <span class="strong">16% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>4/20</span>
+        <span class='fraction'>4/25</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/7</span>
+        <span class='fraction'>0/9</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">14.29% </span>
+        <span class="strong">12.5% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>2/14</span>
+        <span class='fraction'>2/16</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">20% </span>
+        <span class="strong">16.67% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>4/20</span>
+        <span class='fraction'>4/24</span>
       </div>
     </div>
   </div>
@@ -165,7 +165,19 @@
 120
 121
 122
-123</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -190,6 +202,18 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -291,7 +315,7 @@
 import { ScrollView, Text, Image, View, TextInput } from 'react-native'
 import { Images } from '../Themes'
 import RoundedButton from '../Components/RoundedButton'
-// import { Actions as NavigationActions } from 'react-native-router-flux'
+import { Actions as NavigationActions } from 'react-native-router-flux'
 import {create} from 'apisauce'
 &nbsp;
 // Styles
@@ -312,6 +336,18 @@ export default class SignUp extends React.Component {
       email: '',
       password: '',
       address: ''
+    }
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  lo</span>gin (data) {
+<span class="cstat-no" title="statement not covered" >    if (data.success === true) {</span>
+      var postObj = <span class="cstat-no" title="statement not covered" >{</span>
+        'email': this.state.email,
+        'password': this.state.password
+      }
+<span class="cstat-no" title="statement not covered" >      db.post('/user/login', postObj).then(<span class="fstat-no" title="function not covered" >(r</span>esponse) =&gt; <span class="cstat-no" title="statement not covered" >NavigationActions.presentationScreen())</span></span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      window.alert('Sign Up Failed. ' + JSON.stringify(data))</span>
     }
   }
 &nbsp;
@@ -336,7 +372,7 @@ export default class SignUp extends React.Component {
     }
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    db.post('/user/register', postObj)</span>
-    .then(<span class="fstat-no" title="function not covered" >(r</span>esponse) =&gt; <span class="cstat-no" title="statement not covered" >window.alert(JSON.stringify(response.data)))</span>
+    .then(<span class="fstat-no" title="function not covered" >(r</span>esponse) =&gt; <span class="cstat-no" title="statement not covered" >this.login(response.data))</span>
   }
 &nbsp;
 <span class="fstat-no" title="function not covered" >  up</span>dateFName (event) {
@@ -383,19 +419,19 @@ export default class SignUp extends React.Component {
             &lt;View style={styles.messageBoxContents}&gt;
 &nbsp;
               &lt;Text style={styles.sectionText}&gt;First Name&lt;/Text&gt;
-              &lt;TextInput ref="1" onSubmitEditing={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.focusNextField('2')}</span> returnKeyType="next" onChangeText={this.updateFName.bind(this)} placeholder='Enter your first name' placeholderTextColor='white' style={styles.sectionInput} /&gt;
+              &lt;TextInput ref='1' onSubmitEditing={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.focusNextField('2')}</span> returnKeyType='next' onChangeText={this.updateFName.bind(this)} placeholder='Enter your first name' placeholderTextColor='white' style={styles.sectionInput} /&gt;
 &nbsp;
               &lt;Text style={styles.sectionText}&gt;Last Name&lt;/Text&gt;
-              &lt;TextInput ref="2" onSubmitEditing={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.focusNextField('3')}</span> returnKeyType="next" onChangeText={this.updateLName.bind(this)} placeholder='Enter your last name' placeholderTextColor='white' style={styles.sectionInput} /&gt;
+              &lt;TextInput ref='2' onSubmitEditing={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.focusNextField('3')}</span> returnKeyType='next' onChangeText={this.updateLName.bind(this)} placeholder='Enter your last name' placeholderTextColor='white' style={styles.sectionInput} /&gt;
 &nbsp;
               &lt;Text style={styles.sectionText}&gt;Email&lt;/Text&gt;
-              &lt;TextInput ref="3" onSubmitEditing={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.focusNextField('4')}</span> returnKeyType="next" onChangeText={this.updateEmail.bind(this)} placeholder='Enter your email' placeholderTextColor='white' style={styles.sectionInput} keyboardType="email-address" /&gt;
+              &lt;TextInput ref='3' onSubmitEditing={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.focusNextField('4')}</span> returnKeyType='next' onChangeText={this.updateEmail.bind(this)} placeholder='Enter your email' placeholderTextColor='white' style={styles.sectionInput} keyboardType='email-address' /&gt;
 &nbsp;
               &lt;Text style={styles.sectionText}&gt;Password&lt;/Text&gt;
-              &lt;TextInput ref="4" onSubmitEditing={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.focusNextField('5')}</span> returnKeyType="next" onChangeText={this.updatePassword.bind(this)} placeholder='Enter your password' placeholderTextColor='white' style={styles.sectionInput} secureTextEntry={true} /&gt;
+              &lt;TextInput ref='4' onSubmitEditing={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.focusNextField('5')}</span> returnKeyType='next' onChangeText={this.updatePassword.bind(this)} placeholder='Enter your password' placeholderTextColor='white' style={styles.sectionInput} secureTextEntry /&gt;
 &nbsp;
               &lt;Text style={styles.sectionText}&gt;Address&lt;/Text&gt;
-              &lt;TextInput ref="5" onSubmitEditing={this.registerUser.bind(this)} returnKeyType="done" onChangeText={this.updateAddress.bind(this)} placeholder='Enter your address' placeholderTextColor='white' style={styles.sectionInput}  /&gt;
+              &lt;TextInput ref='5' onSubmitEditing={this.registerUser.bind(this)} returnKeyType='done' onChangeText={this.updateAddress.bind(this)} placeholder='Enter your address' placeholderTextColor='white' style={styles.sectionInput} /&gt;
 &nbsp;
             &lt;/View&gt;
           &lt;/View&gt;
@@ -415,7 +451,7 @@ export default class SignUp extends React.Component {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Nov 10 2016 09:17:48 GMT-0500 (EST)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Nov 15 2016 10:08:49 GMT-0500 (EST)
 </div>
 </div>
 <script src="../prettify.js"></script>
