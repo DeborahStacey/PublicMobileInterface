@@ -15,6 +15,9 @@ export default StyleSheet.create({
     color: 'white',
     flexGrow: 95
   },
+  contentsIOS: {
+    flexGrow: 95
+  },
   item: {
     color: 'white'
   },
