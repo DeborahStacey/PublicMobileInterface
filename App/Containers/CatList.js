@@ -2,7 +2,7 @@ import React from 'react'
 import { ScrollView, Text, Image, View } from 'react-native'
 import { Images } from '../Themes'
 import CatCard from '../Components/CatCard'
-// import { Actions as NavigationActions } from 'react-native-router-flux'
+import { Actions as NavigationActions } from 'react-native-router-flux'
 import {create} from 'apisauce'
 
 // Styles
@@ -38,12 +38,11 @@ export default class CatList extends React.Component {
   }
 
   cardClicked (event) {
-    window.alert('this cats id is: ' + event)
+    NavigationActions.catInfo(event)
   }
 
   render () {
     var catsData = this.state.catsData
-
     var catCards = []
     if (catsData != null) {
       for (var i = 0; i < catsData.personal.length; i++) {

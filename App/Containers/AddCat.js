@@ -65,12 +65,16 @@ export default class AddCat extends React.Component {
   registerCat () {
     var postObj = {
       'name': this.state.name,
+      'animalTypeID': '1',
       'breed': this.state.breed,
       'gender': this.state.gender,
       'dateOfBirth': this.state.dob,
       'weight': this.state.weight,
       'height': this.state.height,
-      'length': this.state.length
+      'length': this.state.length,
+      'declawed': 'false',
+      'outdoor': 'false',
+      'fixed': 'false'
     }
 
     db.post('/pet/create', postObj)

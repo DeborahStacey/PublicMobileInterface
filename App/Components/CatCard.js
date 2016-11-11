@@ -25,7 +25,7 @@ export default class CatCard extends React.Component {
     })
   }
 
-  temp () {
+  cardClick () {
     this.props.onClick(this.state.petId)
   }
 
@@ -41,7 +41,7 @@ export default class CatCard extends React.Component {
     }
 
     return (
-      <TouchableOpacity onPress={this.temp.bind(this)} style={styles.outter}>
+      <TouchableOpacity onPress={this.cardClick.bind(this)} style={styles.outter}>
         <View style={CatCardStyle}>
           <View style={styles.innerContents}>
             <View style={styles.textContents}>
