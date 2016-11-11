@@ -1,5 +1,5 @@
 import React from 'react'
-import { Picker, View, Text } from 'react-native'
+import { Platform, Picker, View, Text } from 'react-native'
 import styles from './Styles/DropDownStyle'
 // import ExamplesRegistry from '../Services/ExamplesRegistry'
 
@@ -38,14 +38,26 @@ export default class DropDown extends React.Component {
   }
 
   render () {
-    return (
-      <View style={styles.dropStyle}>
-        <Picker style={styles.contents} selectedValue={this.props.selectedValue} onValueChange={this.props.onValueChange}>
-          {this.state.items}
-        </Picker>
-        <Text style={styles.hackPadding} />
-      </View>
-    )
+    if (Platform.OS==='ios') {
+      return (
+        <View style={styles.dropStyle}>
+          <Picker itemStyle={styles.item} style={styles.contentsIOS} selectedValue={this.props.selectedValue} onValueChange={this.props.onValueChange}>
+            {this.state.items}
+          </Picker>
+          <Text style={styles.hackPadding} />
+        </View>
+      )
+    } else {
+      return (
+        <View style={styles.dropStyle}>
+          <Picker style={styles.contents} selectedValue={this.props.selectedValue} onValueChange={this.props.onValueChange}>
+            {this.state.items}
+          </Picker>
+          <Text style={styles.hackPadding} />
+        </View>
+      )
+    }
+
   }
 }
 

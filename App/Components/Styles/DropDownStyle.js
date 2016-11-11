@@ -15,8 +15,13 @@ export default StyleSheet.create({
     color: 'white',
     flexGrow: 95
   },
+  contentsIOS: {
+    flexGrow: 95
+  },
+  item: {
+    color: 'white'
+  },
   hackPadding: {
-    color: 'white',
     flexGrow: 5,
     paddingTop: 13
   }
