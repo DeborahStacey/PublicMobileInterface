@@ -48,7 +48,7 @@ export default class AccountInfo extends React.Component {
             <Text style={styles.infoTitleText}>Cat Owner?</Text>
             <Text style={styles.infoText}>        Yes</Text>
 
-            <Button style={{textAlign: 'left', fontSize: 20, color: 'green', paddingLeft: 10}} styleDisabled={{color: 'red'}} onPress={() => this._handlePress()}>
+            <Button style={{textAlign: 'left', fontSize: 20, color: 'green', paddingLeft: 10}} styleDisabled={{color: 'red'}} onPress={NavigationActions.catList}>
                       View Cats
             </Button>
             <Button style={{textAlign: 'left', fontSize: 20, color: 'green', paddingLeft: 10, paddingBottom: 45}} styleDisabled={{color: 'red'}} onPress={() => this._handlePress()}>

@@ -50,11 +50,10 @@ class DrawerContent extends Component {
     return (
       <ScrollView style={styles.container}>
         <Image source={Images.logo} style={styles.logo} />
-        <DrawerButton text='Component Examples' onPress={this.handlePressComponents} />
-        <DrawerButton text='Usage Examples' onPress={this.handlePressUsage} />
-        <DrawerButton text='API Testing' onPress={this.handlePressAPI} />
-        <DrawerButton text='Themes' onPress={this.handlePressTheme} />
-        <DrawerButton text='Device Info' onPress={this.handlePressDevice} />
+        <DrawerButton text='Home' onPress={NavigationActions.presentationScreen} />
+        <DrawerButton text='Account' onPress={NavigationActions.accountInfo} />
+        <DrawerButton text='Cats' onPress={NavigationActions.catList} />
+        <DrawerButton text='Sign Out' onPress={this.handlePressDevice} />
       </ScrollView>
     )
   }

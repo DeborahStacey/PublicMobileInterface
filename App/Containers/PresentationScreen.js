@@ -23,14 +23,6 @@ export default class PresentationScreen extends React.Component {
             </Text>
           </View>
 
-          <RoundedButton onPress={NavigationActions.signUp}>
-            Sign Up
-          </RoundedButton>
-
-          <RoundedButton onPress={NavigationActions.signIn}>
-            Sign In
-          </RoundedButton>
-
           <RoundedButton onPress={NavigationActions.addCat}>
             Add Cat
           </RoundedButton>
