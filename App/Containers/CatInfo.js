@@ -19,22 +19,39 @@ export default class CatInfo extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      name: '',
-      breed: 0,
-      gender: 0,
-      dob: '',
-      weight: '',
-      height: '',
-      length: '',
-      breeds: {},
-      genders: {}
+      catInfoData: null
     }
   }
 
+  componentWillMount () {
+    // creating a var for this inside of the promisses
+    var that = this
+
+    // The 1 here is to indicate cat for the animal type
+    db.get('/pet/view/'+ this.props.data)
+    .then(function (response) {
+      var array = response.data
+      that.setState({
+        catInfoData: array
+      })
+    })
+    .catch((error) => window.alert(error))
+  }
+
   openOwner () {
+    alert("not yet implemented")
   }
 
   render () {
+
+    var catInfoData = this.state.catInfoData
+    var catInfo = []
+    if (catInfoData != null) {
+      alert(catInfoData)
+      for (var i = 0; i < catInfoData.length; i++) {
+        catInfo.push(catInfoData[i])
+      }
+    }
     return (
       <View style={styles.mainContainer}>
         <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
@@ -48,22 +65,22 @@ export default class CatInfo extends React.Component {
               </View>
 
               <Text style={styles.infoTitleText}>Name</Text>
-              <Text style={styles.infoText}>Fluffy</Text>
+              <Text style={styles.infoText}>{catInfo[0]}</Text>
 
               <Text style={styles.infoTitleText}>Breed</Text>
-              <Text style={styles.infoText}>Maine Coon</Text>
+              <Text style={styles.infoText}>{catInfo[1]}</Text>
 
               <Text style={styles.infoTitleText}>Gender</Text>
-              <Text style={styles.infoText}>Male</Text>
+              <Text style={styles.infoText}>{catInfo[2]}</Text>
 
               <Text style={styles.infoTitleText}>Weight</Text>
-              <Text style={styles.infoText}>15 lbs</Text>
+              <Text style={styles.infoText}>{catInfo[3]}</Text>
 
               <Text style={styles.infoTitleText}>Height</Text>
-              <Text style={styles.infoText}>20 cm</Text>
+              <Text style={styles.infoText}>{catInfo[4]}</Text>
 
               <Text style={styles.infoTitleText}>Length</Text>
-              <Text style={styles.infoText}>50 cm</Text>
+              <Text style={styles.infoText}>{catInfo[5]}</Text>
 
             </View>
           </View>
