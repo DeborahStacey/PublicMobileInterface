@@ -19,7 +19,7 @@ export default {
         <Icon name='angle-left'
           size={Metrics.icons.medium}
           color={Colors.snow}
-          style={styles.navButtonLeft}
+          style={styles.navButtonRight}
         />
       </TouchableOpacity>
     )
