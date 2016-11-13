@@ -1,7 +1,8 @@
 import React from 'react'
 import { ScrollView, Text, Image, View } from 'react-native'
+import { Images } from '../Themes'
 import RoundedButton from '../Components/RoundedButton'
-// import {create} from 'apisauce'
+import {create} from 'apisauce'
 import { Actions as NavigationActions } from 'react-native-router-flux'
 
 // Styles
@@ -23,13 +24,27 @@ export default class CatInfo extends React.Component {
       dob: '',
       weight: '',
       height: '',
-      length: '',
-      breeds: {},
-      genders: {}
+      length: ''
     }
   }
 
-  openOwner () {
+  componentWillMount () {
+    var that = this
+
+    db.get('/pet/view/' + this.props.data)
+    .then(function (response) {
+      var petData = response.data.pet
+      that.setState({
+        name: petData.name,
+        breed: petData.breed,
+        gender: petData.gender,
+        dob: petData.dateofbirth,
+        weight: petData.weight,
+        height: petData.height,
+        length: petData.length
+      })
+    })
+    .catch((error) => window.alert(error))
   }
 
   render () {
@@ -45,22 +60,22 @@ export default class CatInfo extends React.Component {
               </View>
 
               <Text style={styles.infoTitleText}>Name</Text>
-              <Text style={styles.infoText}>Fluffy</Text>
+              <Text style={styles.infoText}>{this.state.name}</Text>
 
               <Text style={styles.infoTitleText}>Breed</Text>
-              <Text style={styles.infoText}>Maine Coon</Text>
+              <Text style={styles.infoText}>{this.state.breed}</Text>
 
               <Text style={styles.infoTitleText}>Gender</Text>
-              <Text style={styles.infoText}>Male</Text>
+              <Text style={styles.infoText}>{this.state.gender}</Text>
 
               <Text style={styles.infoTitleText}>Weight</Text>
-              <Text style={styles.infoText}>15 lbs</Text>
+              <Text style={styles.infoText}>{this.state.weight} lbs</Text>
 
               <Text style={styles.infoTitleText}>Height</Text>
-              <Text style={styles.infoText}>20 cm</Text>
+              <Text style={styles.infoText}>{this.state.height} cm</Text>
 
               <Text style={styles.infoTitleText}>Length</Text>
-              <Text style={styles.infoText}>50 cm</Text>
+              <Text style={styles.infoText}>{this.state.length} cm</Text>
 
             </View>
           </View>
