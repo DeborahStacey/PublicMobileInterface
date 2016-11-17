@@ -24,7 +24,9 @@ export default class CatInfo extends React.Component {
       dob: '',
       weight: '',
       height: '',
-      length: ''
+      length: '',
+      breeds: {},
+      genders: {}
     }
   }
 
@@ -45,9 +47,51 @@ export default class CatInfo extends React.Component {
       })
     })
     .catch((error) => window.alert(error))
+
+
+    db.get('/animal/1/breeds')
+    .then(function (response) {
+      var breedsData = response.data.breeds
+      that.setState({
+        breeds: breedsData
+      })
+      console.log(breedsData)
+    })
+    .catch((error) => window.alert(error))
+
+
+    db.get('/animal/genders')
+    .then(function (response) {
+      var gendersData = response.data.genders
+      that.setState({
+        genders: gendersData
+      })
+      console.log(gendersData[1])
+    })
+    .catch((error) => window.alert(error))
   }
 
   render () {
+    var curBreed = "";
+    var curGender = "";
+
+    if (this.state.breeds != null) {
+      for (var i = 0; i < this.state.breeds.length; i++) {
+        if(parseInt(this.state.breeds[i].id) == this.state.breed){
+          curBreed = this.state.breeds[i].name;
+        }
+      }
+    }
+
+    if (this.state.genders != null) {
+      for (var i = 0; i < this.state.genders.length; i++) {
+        if(parseInt(this.state.genders[i].id) == this.state.gender){
+          curGender = this.state.genders[i].name;
+        }
+      }
+    }
+
+
     return (
       <View style={styles.mainContainer}>
         <ScrollView style={styles.container}>
@@ -63,10 +107,10 @@ export default class CatInfo extends React.Component {
               <Text style={styles.infoText}>{this.state.name}</Text>
 
               <Text style={styles.infoTitleText}>Breed</Text>
-              <Text style={styles.infoText}>{this.state.breed}</Text>
+              <Text style={styles.infoText}>{curBreed}</Text>
 
               <Text style={styles.infoTitleText}>Gender</Text>
-              <Text style={styles.infoText}>{this.state.gender}</Text>
+              <Text style={styles.infoText}>{curGender}</Text>
 
               <Text style={styles.infoTitleText}>Weight</Text>
               <Text style={styles.infoText}>{this.state.weight} lbs</Text>
