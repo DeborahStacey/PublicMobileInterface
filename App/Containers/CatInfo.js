@@ -1,5 +1,5 @@
 import React from 'react'
-import { ScrollView, Text, Image, View } from 'react-native'
+import { ScrollView, Text, Image, View, TextInput } from 'react-native'
 import { Images } from '../Themes'
 import RoundedButton from '../Components/RoundedButton'
 import {create} from 'apisauce'
@@ -71,6 +71,10 @@ export default class CatInfo extends React.Component {
     .catch((error) => window.alert(error))
   }
 
+  updateCat(){
+    alert("Updated Cat Info");
+  }
+
   render () {
     var curBreed = "";
     var curGender = "";
@@ -90,7 +94,10 @@ export default class CatInfo extends React.Component {
         }
       }
     }
-
+    //<Text style={styles.infoText}>{this.state.name}</Text>
+    //<Text style={styles.infoText}>{this.state.weight} lbs</Text>
+    // <Text style={styles.infoText}>{this.state.height} cm</Text>
+    // <Text style={styles.infoText}>{this.state.length} cm</Text>
 
     return (
       <View style={styles.mainContainer}>
@@ -104,7 +111,7 @@ export default class CatInfo extends React.Component {
               </View>
 
               <Text style={styles.infoTitleText}>Name</Text>
-              <Text style={styles.infoText}>{this.state.name}</Text>
+              <TextInput onChangeText={this.updateCat.bind(this)} value={this.state.name} placeholderTextColor='white' style={styles.sectionInput} />
 
               <Text style={styles.infoTitleText}>Breed</Text>
               <Text style={styles.infoText}>{curBreed}</Text>
@@ -112,14 +119,14 @@ export default class CatInfo extends React.Component {
               <Text style={styles.infoTitleText}>Gender</Text>
               <Text style={styles.infoText}>{curGender}</Text>
 
-              <Text style={styles.infoTitleText}>Weight</Text>
-              <Text style={styles.infoText}>{this.state.weight} lbs</Text>
+              <Text style={styles.infoTitleText}>Weight</Text>              
+              <TextInput onChangeText={this.updateCat.bind(this)} value={this.state.weight+'lbs'} placeholderTextColor='white' style={styles.sectionInput} />
 
               <Text style={styles.infoTitleText}>Height</Text>
-              <Text style={styles.infoText}>{this.state.height} cm</Text>
+              <TextInput onChangeText={this.updateCat.bind(this)} value={this.state.height+'cm'} placeholderTextColor='white' style={styles.sectionInput} />
 
               <Text style={styles.infoTitleText}>Length</Text>
-              <Text style={styles.infoText}>{this.state.length} cm</Text>
+              <TextInput onChangeText={this.updateCat.bind(this)} value={this.state.length+'cm'} placeholderTextColor='white' style={styles.sectionInput} />
 
             </View>
           </View>
