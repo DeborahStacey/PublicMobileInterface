@@ -133,7 +133,7 @@ export default class AddCat extends React.Component {
             <View style={styles.messageBoxContents}>
 
               <Text style={styles.sectionText}>Name</Text>
-              <TextInput onChangeText={this.updateName.bind(this)} placeholder='Enter your cats name' placeholderTextColor='white' style={styles.sectionInput} />
+              <TextInput onChangeText={this.updateName.bind(this)} placeholder='Enter your cat&apos;s name' placeholderTextColor='white' style={styles.sectionInput} />
 
               <Text style={styles.sectionText}>Breed</Text>
               <DropDown options={this.state.breeds} onValueChange={this.updateBreed.bind(this)} selectedValue={this.state.breed} />
@@ -142,13 +142,13 @@ export default class AddCat extends React.Component {
               <DropDown options={this.state.genders} onValueChange={this.updateGender.bind(this)} selectedValue={this.state.gender} />
 
               <Text style={styles.sectionText}>Weight</Text>
-              <TextInput onChangeText={this.updateWeight.bind(this)} placeholder='Enter your cats weight' placeholderTextColor='white' style={styles.sectionInput} />
+              <TextInput onChangeText={this.updateWeight.bind(this)} placeholder='Enter your cat&apos;s weight (lbs)' placeholderTextColor='white' style={styles.sectionInput} />
 
               <Text style={styles.sectionText}>Height</Text>
-              <TextInput onChangeText={this.updateHeight.bind(this)} placeholder='Enter your cats height' placeholderTextColor='white' style={styles.sectionInput} />
+              <TextInput onChangeText={this.updateHeight.bind(this)} placeholder='Enter your cat&apos;s height (cm)' placeholderTextColor='white' style={styles.sectionInput} />
 
               <Text style={styles.sectionText}>Length</Text>
-              <TextInput onChangeText={this.updateLength.bind(this)} placeholder='Enter your cats length' placeholderTextColor='white' style={styles.sectionInput} />
+              <TextInput onChangeText={this.updateLength.bind(this)} placeholder='Enter your cat&apos;s length (cm)' placeholderTextColor='white' style={styles.sectionInput} />
 
             </View>
           </View>
