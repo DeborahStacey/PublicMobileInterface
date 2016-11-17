@@ -71,8 +71,34 @@ export default class CatInfo extends React.Component {
     .catch((error) => window.alert(error))
   }
 
+  updateName(event){
+    this.setState({
+      name: event
+    })
+  }
+
+  updateWeight(event){
+    this.setState({
+      weight: event
+    })
+  }
+
+  updateHeight(event){
+    this.setState({
+      height: event
+    })
+  }
+
+  updateLength(event){
+    this.setState({
+      length: event
+    })
+  }
+
   updateCat(){
-    alert("Updated Cat Info");
+    //run database call here
+    //alert("Updated Cat Info")
+    console.log("Updated Cat Info")
   }
 
   render () {
@@ -94,10 +120,6 @@ export default class CatInfo extends React.Component {
         }
       }
     }
-    //<Text style={styles.infoText}>{this.state.name}</Text>
-    //<Text style={styles.infoText}>{this.state.weight} lbs</Text>
-    // <Text style={styles.infoText}>{this.state.height} cm</Text>
-    // <Text style={styles.infoText}>{this.state.length} cm</Text>
 
     return (
       <View style={styles.mainContainer}>
@@ -111,7 +133,7 @@ export default class CatInfo extends React.Component {
               </View>
 
               <Text style={styles.infoTitleText}>Name</Text>
-              <TextInput onChangeText={this.updateCat.bind(this)} value={this.state.name} placeholderTextColor='white' style={styles.sectionInput} />
+              <TextInput onBlur={this.updateCat.bind(this)} onChangeText={this.updateName.bind(this)} value={this.state.name} placeholderTextColor='white' style={styles.sectionInput} />
 
               <Text style={styles.infoTitleText}>Breed</Text>
               <Text style={styles.infoText}>{curBreed}</Text>
@@ -119,14 +141,14 @@ export default class CatInfo extends React.Component {
               <Text style={styles.infoTitleText}>Gender</Text>
               <Text style={styles.infoText}>{curGender}</Text>
 
-              <Text style={styles.infoTitleText}>Weight</Text>              
-              <TextInput onChangeText={this.updateCat.bind(this)} value={this.state.weight+'lbs'} placeholderTextColor='white' style={styles.sectionInput} />
+              <Text style={styles.infoTitleText}>Weight (lbs)</Text>              
+              <TextInput onBlur={this.updateCat.bind(this)} onChangeText={this.updateWeight.bind(this)} value={this.state.weight} placeholderTextColor='white' style={styles.sectionInput} />
 
-              <Text style={styles.infoTitleText}>Height</Text>
-              <TextInput onChangeText={this.updateCat.bind(this)} value={this.state.height+'cm'} placeholderTextColor='white' style={styles.sectionInput} />
+              <Text style={styles.infoTitleText}>Height (cm)</Text>
+              <TextInput onBlur={this.updateCat.bind(this)} onChangeText={this.updateHeight.bind(this)} value={this.state.height} placeholderTextColor='white' style={styles.sectionInput} />
 
-              <Text style={styles.infoTitleText}>Length</Text>
-              <TextInput onChangeText={this.updateCat.bind(this)} value={this.state.length+'cm'} placeholderTextColor='white' style={styles.sectionInput} />
+              <Text style={styles.infoTitleText}>Length (cm)</Text>
+              <TextInput onBlur={this.updateCat.bind(this)} onChangeText={this.updateLength.bind(this)} value={this.state.length} placeholderTextColor='white' style={styles.sectionInput} />
 
             </View>
           </View>
