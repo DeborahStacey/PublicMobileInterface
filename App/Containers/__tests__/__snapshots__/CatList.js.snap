@@ -1,0 +1,51 @@
+exports[`test renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "rgba(0,0,0,0)",
+      "flex": 1,
+      "marginTop": 64,
+    }
+  }>
+  <Image
+    resizeMode="stretch"
+    source={1}
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    } />
+  <ScrollView
+    style={
+      Object {
+        "flex": 1,
+        "paddingTop": 10,
+      }
+    }>
+    <View
+      style={undefined}>
+      <View
+        style={undefined}>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "white",
+              "fontWeight": "bold",
+              "marginVertical": 5,
+              "textAlign": "center",
+            }
+          }>
+          My Cats
+        </Text>
+      </View>
+    </View>
+  </ScrollView>
+</View>
+`;

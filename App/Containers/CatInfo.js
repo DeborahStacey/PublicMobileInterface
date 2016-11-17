@@ -1,18 +1,17 @@
 import React from 'react'
-import { ScrollView, Text, Image, View, TextInput } from 'react-native'
+import { ScrollView, Text, Image, View } from 'react-native'
 import { Images } from '../Themes'
 import RoundedButton from '../Components/RoundedButton'
-import DropDown from '../Components/DropDown'
-import {create} from 'apisauce'
+// import {create} from 'apisauce'
 import { Actions as NavigationActions } from 'react-native-router-flux'
 
 // Styles
 import styles from './Styles/PresentationScreenStyle'
 
-const db = create({
-  baseURL: 'https://cat.ddns.net/Backend/api.php',
-  headers: {'Content-Type': 'application/json'}
-})
+// const db = create({
+//   baseURL: 'https://cat.ddns.net/Backend/api.php',
+//   headers: {'Content-Type': 'application/json'}
+// })
 
 export default class CatInfo extends React.Component {
 

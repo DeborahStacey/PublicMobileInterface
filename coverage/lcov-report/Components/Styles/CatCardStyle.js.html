@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for Components/Styles/DropDownStyle.js</title>
+    <title>Code coverage report for Components/Styles/CatCardStyle.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -16,7 +16,7 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../index.html">All files</a> / <a href="index.html">Components/Styles</a> DropDownStyle.js
+      <a href="../../index.html">All files</a> / <a href="index.html">Components/Styles</a> CatCardStyle.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
@@ -71,7 +71,65 @@
 26
 27
 28
-29</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -104,27 +162,56 @@
 import { StyleSheet } from 'react-native'
 &nbsp;
 export default StyleSheet.create({
-  dropStyle: {
-    flexDirection: 'row',
+  catCardMale: {
+    flexDirection: 'column',
     flexWrap: 'wrap',
-    zIndex: 99,
-    borderRadius: 20,
+    borderRadius: 5,
     borderWidth: 2,
-    borderColor: 'grey'
+    borderColor: 'grey',
+    backgroundColor: 'blue'
   },
-  contents: {
+  catCardFemale: {
+    flexDirection: 'column',
+    flexWrap: 'wrap',
+    borderRadius: 5,
+    borderWidth: 2,
+    borderColor: 'grey',
+    backgroundColor: '#ac00e0'
+  },
+  catCardOther: {
+    flexDirection: 'column',
+    flexWrap: 'wrap',
+    borderRadius: 5,
+    borderWidth: 2,
+    borderColor: 'grey',
+    backgroundColor: 'green'
+  },
+  innerContents: {
+    flexDirection: 'row'
+  },
+  textContents: {
+    flex: 80,
+    overflow: 'hidden'
+  },
+  name: {
     color: 'white',
-    flexGrow: 95
+    paddingLeft: 10,
+    fontSize: 30
   },
-  contentsIOS: {
-    flexGrow: 95
+  catPicture: {
+    marginRight: 10,
+    width: 80,
+    height: 90,
+    flex: 12
   },
-  item: {
-    color: 'white'
+  owner: {
+    color: 'white',
+    paddingLeft: 10
   },
-  hackPadding: {
-    flexGrow: 5,
-    paddingTop: 13
+  outter: {
+    paddingLeft: 5,
+    paddingRight: 5,
+    paddingBottom: 5
   }
 })
 &nbsp;</pre></td></tr>

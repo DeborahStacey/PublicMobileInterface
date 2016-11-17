@@ -1,20 +1,22 @@
 import 'react-native'
 import React from 'react'
-import SignIn from '../SignIn'
+import CatInfo from '../CatInfo'
 import renderer from 'react-test-renderer'
 
 jest.mock('react-native-router-flux', () => {
   return {
     Actions: {
-      presentationScreen: () => {},
-      signUp: () => {}
+      addCat: () => {},
+      accountInfo: () => {},
+      catInfo: () => {},
+      catList: () => {}
     }
   }
 })
 
 it('renders correctly', () => {
   const tree = renderer.create(
-    <SignIn />
+    <CatInfo />
   ).toJSON()
   expect(tree).toMatchSnapshot()
 })

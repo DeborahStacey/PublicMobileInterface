@@ -20,24 +20,24 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">28.57% </span>
+        <span class="strong">23.53% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>4/14</span>
+        <span class='fraction'>4/17</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/4</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">22.22% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/9</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">25% </span>
-        <span class="quiet">Functions</span>
-        <span class='fraction'>2/8</span>
-      </div>
-      <div class='fl pad1y space-right2'>
-        <span class="strong">30.77% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>4/13</span>
+        <span class='fraction'>4/16</span>
       </div>
     </div>
   </div>
@@ -124,7 +124,26 @@
 79
 80
 81
-82</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -152,6 +171,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -188,7 +215,18 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -209,7 +247,7 @@
 import { ScrollView, Text, Image, View, TextInput } from 'react-native'
 import { Images } from '../Themes'
 import RoundedButton from '../Components/RoundedButton'
-// import { Actions as NavigationActions } from 'react-native-router-flux'
+import { Actions as NavigationActions } from 'react-native-router-flux'
 import {create} from 'apisauce'
 &nbsp;
 // Styles
@@ -230,6 +268,14 @@ export default class SignIn extends React.Component {
     }
   }
 &nbsp;
+<span class="fstat-no" title="function not covered" >  lo</span>gin (data) {
+<span class="cstat-no" title="statement not covered" >    if (data.success === true) {</span>
+<span class="cstat-no" title="statement not covered" >      NavigationActions.presentationScreen()</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      window.alert('Incorrect Email Address or Password')</span>
+    }
+  }
+&nbsp;
 <span class="fstat-no" title="function not covered" >  si</span>gnInUser () {
 <span class="cstat-no" title="statement not covered" >    if (this.state.email === '' || this.state.password === '') {</span>
 <span class="cstat-no" title="statement not covered" >      window.alert('not all of the fields have been filled out please enter all data!')</span>
@@ -240,7 +286,7 @@ export default class SignIn extends React.Component {
       'email': this.state.email,
       'password': this.state.password
     }
-<span class="cstat-no" title="statement not covered" >    db.post('/user/login', postObj).then(<span class="fstat-no" title="function not covered" >(r</span>esponse) =&gt; <span class="cstat-no" title="statement not covered" >window.alert(JSON.stringify(response.data)))</span></span>
+<span class="cstat-no" title="statement not covered" >    db.post('/user/login', postObj).then(<span class="fstat-no" title="function not covered" >(r</span>esponse) =&gt; <span class="cstat-no" title="statement not covered" >this.login(response.data))</span></span>
   }
 &nbsp;
 <span class="fstat-no" title="function not covered" >  up</span>dateEmail (event) {
@@ -264,16 +310,18 @@ export default class SignIn extends React.Component {
       &lt;View style={styles.mainContainer}&gt;
         &lt;Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' /&gt;
         &lt;ScrollView style={styles.container}&gt;
+          &lt;View style={styles.section} &gt;
+            &lt;Text style={styles.sectionText} &gt;
+              Welcome to WellCat!
+            &lt;/Text&gt;
+          &lt;/View&gt;
 &nbsp;
           &lt;View style={styles.messageBox}&gt;
             &lt;View style={styles.messageBoxContents}&gt;
-&nbsp;
               &lt;Text style={styles.sectionText}&gt;Email&lt;/Text&gt;
-              &lt;TextInput ref="1" onSubmitEditing={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.focusNextField('2')}</span> returnKeyType="next" onChangeText={this.updateEmail.bind(this)} placeholder='Enter your email' placeholderTextColor='white' style={styles.sectionInput} keyboardType="email-address" /&gt;
-&nbsp;
+              &lt;TextInput ref='1' onSubmitEditing={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.focusNextField('2')}</span> returnKeyType='next' onChangeText={this.updateEmail.bind(this)} placeholder='Enter your email' placeholderTextColor='white' style={styles.sectionInput} keyboardType='email-address' /&gt;
               &lt;Text style={styles.sectionText}&gt;Password&lt;/Text&gt;
-              &lt;TextInput ref="2" onSubmitEditing={this.signInUser.bind(this)} returnKeyType="done" onChangeText={this.updatePassword.bind(this)} placeholder='Enter your password' placeholderTextColor='white' style={styles.sectionInput} secureTextEntry={true} /&gt;
-&nbsp;
+              &lt;TextInput ref='2' onSubmitEditing={this.signInUser.bind(this)} returnKeyType='done' onChangeText={this.updatePassword.bind(this)} placeholder='Enter your password' placeholderTextColor='white' style={styles.sectionInput} secureTextEntry /&gt;
             &lt;/View&gt;
           &lt;/View&gt;
 &nbsp;
@@ -281,6 +329,15 @@ export default class SignIn extends React.Component {
             Sign In
           &lt;/RoundedButton&gt;
 &nbsp;
+          &lt;RoundedButton onPress={NavigationActions.signUp}&gt;
+            Sign Up
+          &lt;/RoundedButton&gt;
+&nbsp;
+          &lt;View style={styles.section} &gt;
+            &lt;Text style={styles.sectionText} &gt;
+              News Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel felis sed ipsum luctus congue eget quis augue.
+            &lt;/Text&gt;
+          &lt;/View&gt;
         &lt;/ScrollView&gt;
       &lt;/View&gt;
     )
@@ -292,7 +349,7 @@ export default class SignIn extends React.Component {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Nov 10 2016 09:17:48 GMT-0500 (EST)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Nov 15 2016 10:08:49 GMT-0500 (EST)
 </div>
 </div>
 <script src="../prettify.js"></script>
