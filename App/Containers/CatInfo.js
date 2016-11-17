@@ -1,5 +1,5 @@
 import React from 'react'
-import { ScrollView, Text, Image, View, TextInput } from 'react-native'
+import { ScrollView, Text, Image, View, TextInput, TouchableOpacity, Slider } from 'react-native'
 import { Images } from '../Themes'
 import RoundedButton from '../Components/RoundedButton'
 import {create} from 'apisauce'
@@ -26,7 +26,8 @@ export default class CatInfo extends React.Component {
       height: '',
       length: '',
       breeds: {},
-      genders: {}
+      genders: {},
+      weightState: 0
     }
   }
 
@@ -101,6 +102,13 @@ export default class CatInfo extends React.Component {
     console.log("Updated Cat Info")
   }
 
+  weightClick() {
+    console.log('weightClick')
+    this.setState({
+      weightState: 1
+    })
+  }
+
   render () {
     var curBreed = "";
     var curGender = "";
@@ -119,6 +127,23 @@ export default class CatInfo extends React.Component {
           curGender = this.state.genders[i].name;
         }
       }
+    }
+
+    var weight
+
+    if(this.state.weightState === 0) {
+      weight = (
+        <TouchableOpacity onPress={this.weightClick.bind(this)}>
+          <Text style={styles.infoText} >{this.state.weight}</Text>
+        </TouchableOpacity>
+      )
+    } else {
+      weight = (
+        <View>
+          <Text style={styles.infoText} >{this.state.weight}</Text> 
+          <Slider minimumValue={1} maximumValue={50} step={1} value={parseInt(this.state.weight)} onValueChange={this.updateWeight.bind(this)} />
+        </View>
+      )
     }
 
     return (
@@ -142,7 +167,7 @@ export default class CatInfo extends React.Component {
               <Text style={styles.infoText}>{curGender}</Text>
 
               <Text style={styles.infoTitleText}>Weight (lbs)</Text>              
-              <TextInput onBlur={this.updateCat.bind(this)} onChangeText={this.updateWeight.bind(this)} value={this.state.weight} placeholderTextColor='white' style={styles.sectionInput} />
+              {weight}
 
               <Text style={styles.infoTitleText}>Height (cm)</Text>
               <TextInput onBlur={this.updateCat.bind(this)} onChangeText={this.updateHeight.bind(this)} value={this.state.height} placeholderTextColor='white' style={styles.sectionInput} />
