@@ -1,7 +1,8 @@
 import React from 'react'
-import { ScrollView, Text, Image, View, TextInput, TouchableOpacity, Slider } from 'react-native'
+import { ScrollView, Text, Image, View, TextInput, TouchableOpacity } from 'react-native'
 import { Images } from '../Themes'
 import RoundedButton from '../Components/RoundedButton'
+import NumericalSlider from '../Components/NumericalSlider'
 import {create} from 'apisauce'
 import { Actions as NavigationActions } from 'react-native-router-flux'
 
@@ -22,12 +23,14 @@ export default class CatInfo extends React.Component {
       breed: 0,
       gender: 0,
       dob: '',
-      weight: '',
-      height: '',
-      length: '',
+      weight: 0,
+      height: 0,
+      length: 0,
       breeds: {},
       genders: {},
-      weightState: 0
+      weightState: 0,
+      heightState: 0,
+      lengthState: 0
     }
   }
 
@@ -42,13 +45,12 @@ export default class CatInfo extends React.Component {
         breed: petData.breed,
         gender: petData.gender,
         dob: petData.dateofbirth,
-        weight: petData.weight,
-        height: petData.height,
-        length: petData.length
+        weight: parseInt(petData.weight),
+        height: parseInt(petData.height),
+        length: parseInt(petData.length)
       })
     })
     .catch((error) => window.alert(error))
-
 
     db.get('/animal/1/breeds')
     .then(function (response) {
@@ -59,7 +61,6 @@ export default class CatInfo extends React.Component {
       console.log(breedsData)
     })
     .catch((error) => window.alert(error))
-
 
     db.get('/animal/genders')
     .then(function (response) {
@@ -72,77 +73,113 @@ export default class CatInfo extends React.Component {
     .catch((error) => window.alert(error))
   }
 
-  updateName(event){
+  updateName (event) {
     this.setState({
       name: event
     })
   }
 
-  updateWeight(event){
-    this.setState({
-      weight: event
-    })
-  }
-
-  updateHeight(event){
-    this.setState({
-      height: event
-    })
-  }
-
-  updateLength(event){
-    this.setState({
-      length: event
-    })
-  }
-
-  updateCat(){
-    //run database call here
-    //alert("Updated Cat Info")
-    console.log("Updated Cat Info")
-  }
-
-  weightClick() {
-    console.log('weightClick')
+  weightClick () {
     this.setState({
       weightState: 1
     })
   }
 
+  updateWeight (newWeight) {
+    this.setState({
+      weight: newWeight,
+      weightState: 0
+    })
+  }
+
+  heightClick () {
+    this.setState({
+      heightState: 1
+    })
+  }
+
+  updateHeight (event) {
+    this.setState({
+      height: event,
+      heightState: 0
+    })
+  }
+
+  lengthClick () {
+    this.setState({
+      lengthState: 1
+    })
+  }
+
+  updateLength (event) {
+    this.setState({
+      length: event,
+      lengthState: 0
+    })
+  }
+
+  updateCat () {
+    console.log('Updated Cat Info')
+  }
+
   render () {
-    var curBreed = "";
-    var curGender = "";
+    var curBreed = ''
+    var curGender = ''
 
     if (this.state.breeds != null) {
       for (var i = 0; i < this.state.breeds.length; i++) {
-        if(parseInt(this.state.breeds[i].id) == this.state.breed){
-          curBreed = this.state.breeds[i].name;
+        if (parseInt(this.state.breeds[i].id) === this.state.breed) {
+          curBreed = this.state.breeds[i].name
         }
       }
     }
 
     if (this.state.genders != null) {
-      for (var i = 0; i < this.state.genders.length; i++) {
-        if(parseInt(this.state.genders[i].id) == this.state.gender){
-          curGender = this.state.genders[i].name;
+      for (var j = 0; j < this.state.genders.length; j++) {
+        if (parseInt(this.state.genders[j].id) === this.state.gender) {
+          curGender = this.state.genders[j].name
         }
       }
     }
 
-    var weight
+    // I know this looks like crap but it works and I think it might actually be the correct way.
 
-    if(this.state.weightState === 0) {
+    var weight
+    if (this.state.weightState === 0) {
       weight = (
         <TouchableOpacity onPress={this.weightClick.bind(this)}>
-          <Text style={styles.infoText} >{this.state.weight}</Text>
+          <Text style={styles.infoText} >{this.state.weight} lbs</Text>
         </TouchableOpacity>
       )
     } else {
       weight = (
-        <View>
-          <Text style={styles.infoText} >{this.state.weight}</Text> 
-          <Slider minimumValue={1} maximumValue={50} step={1} value={parseInt(this.state.weight)} onValueChange={this.updateWeight.bind(this)} />
-        </View>
+        <NumericalSlider minimumValue={1} maximumValue={50} step={1} initialValue={this.state.weight} onClick={this.updateWeight.bind(this)} units='lbs' />
+      )
+    }
+
+    var height
+    if (this.state.heightState === 0) {
+      height = (
+        <TouchableOpacity onPress={this.heightClick.bind(this)}>
+          <Text style={styles.infoText} >{this.state.height} cm</Text>
+        </TouchableOpacity>
+      )
+    } else {
+      height = (
+        <NumericalSlider minimumValue={1} maximumValue={50} step={1} initialValue={this.state.height} onClick={this.updateHeight.bind(this)} units='cm' />
+      )
+    }
+
+    var length
+    if (this.state.lengthState === 0) {
+      length = (
+        <TouchableOpacity onPress={this.lengthClick.bind(this)}>
+          <Text style={styles.infoText} >{this.state.length} cm</Text>
+        </TouchableOpacity>
+      )
+    } else {
+      length = (
+        <NumericalSlider minimumValue={1} maximumValue={120} step={1} initialValue={this.state.length} onClick={this.updateLength.bind(this)} units='cm' />
       )
     }
 
@@ -166,14 +203,14 @@ export default class CatInfo extends React.Component {
               <Text style={styles.infoTitleText}>Gender</Text>
               <Text style={styles.infoText}>{curGender}</Text>
 
-              <Text style={styles.infoTitleText}>Weight (lbs)</Text>              
+              <Text style={styles.infoTitleText}>Weight</Text>
               {weight}
 
-              <Text style={styles.infoTitleText}>Height (cm)</Text>
-              <TextInput onBlur={this.updateCat.bind(this)} onChangeText={this.updateHeight.bind(this)} value={this.state.height} placeholderTextColor='white' style={styles.sectionInput} />
+              <Text style={styles.infoTitleText}>Height</Text>
+              {height}
 
-              <Text style={styles.infoTitleText}>Length (cm)</Text>
-              <TextInput onBlur={this.updateCat.bind(this)} onChangeText={this.updateLength.bind(this)} value={this.state.length} placeholderTextColor='white' style={styles.sectionInput} />
+              <Text style={styles.infoTitleText}>Length</Text>
+              {length}
 
             </View>
           </View>
