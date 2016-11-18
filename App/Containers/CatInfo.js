@@ -9,10 +9,10 @@ import { Actions as NavigationActions } from 'react-native-router-flux'
 // Styles
 import styles from './Styles/PresentationScreenStyle'
 
-// const db = create({
-//   baseURL: 'https://cat.ddns.net/Backend/api.php',
-//   headers: {'Content-Type': 'application/json'}
-// })
+const db = create({
+  baseURL: 'https://cat.ddns.net/Backend/api.php',
+  headers: {'Content-Type': 'application/json'}
+})
 
 export default class CatInfo extends React.Component {
 
