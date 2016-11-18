@@ -122,13 +122,6 @@ export default class CatInfo extends React.Component {
     console.log('Updated Cat Info')
   }
 
-  weightClick() {
-    console.log('weightClick')
-    this.setState({
-      weightState: 1
-    })
-  }
-
   render () {
     var curBreed = ''
     var curGender = ''
