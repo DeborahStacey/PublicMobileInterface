@@ -74,10 +74,11 @@ export default class CatInfo extends React.Component {
   }
 
   updateName (newName) {
+    this.state.name = newName
+    this.updateCat()
     this.setState({
       name: newName
     })
-    this.updateCat()
   }
 
   weightClick () {
@@ -87,11 +88,12 @@ export default class CatInfo extends React.Component {
   }
 
   updateWeight (newWeight) {
+    this.state.weight = newWeight
+    this.updateCat()
     this.setState({
       weight: newWeight,
       weightState: 0
     })
-    this.updateCat()
   }
 
   heightClick () {
@@ -101,11 +103,12 @@ export default class CatInfo extends React.Component {
   }
 
   updateHeight (newHeight) {
+    this.state.height = newHeight
+    this.updateCat()
     this.setState({
       height: newHeight,
       heightState: 0
     })
-    this.updateCat()
   }
 
   lengthClick () {
@@ -114,12 +117,13 @@ export default class CatInfo extends React.Component {
     })
   }
 
-  updateLength (event) {
+  updateLength (newLength) {
+    this.state.length = newLength
+    this.updateCat()
     this.setState({
-      length: event,
+      length: newLength,
       lengthState: 0
     })
-    this.updateCat()
   }
 
   updateCat () {
