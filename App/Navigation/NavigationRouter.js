@@ -13,6 +13,7 @@ import AddCat from '../Containers/AddCat'
 import AccountInfo from '../Containers/AccountInfo'
 import CatInfo from '../Containers/CatInfo'
 import CatList from '../Containers/CatList'
+import ShareCat from '../Containers/ShareCat'
 
 /* **************************
 * Documentation: https://github.com/aksonov/react-native-router-flux
@@ -31,6 +32,7 @@ class NavigationRouter extends Component {
             <Scene key='accountInfo' component={AccountInfo} title='Account Info' renderLeftButton={() => true} renderRightButton={NavItems.hamburgerButton} />
             <Scene key='catInfo' component={CatInfo} title='Cat Info' renderLeftButton={() => true} renderRightButton={NavItems.hamburgerButton} />
             <Scene key='catList' component={CatList} title='Cat List' renderLeftButton={() => true} renderRightButton={NavItems.hamburgerButton} />
+            <Scene key='shareCat' component={ShareCat} title='Share Cat' renderLeftButton={() => true} renderRightButton={NavItems.hamburgerButton} />
           </Scene>
         </Scene>
       </Router>

@@ -77,6 +77,7 @@ export default class CatInfo extends React.Component {
     this.setState({
       name: newName
     })
+    this.updateCat()
   }
 
   weightClick () {
@@ -90,6 +91,7 @@ export default class CatInfo extends React.Component {
       weight: newWeight,
       weightState: 0
     })
+    this.updateCat()
   }
 
   heightClick () {
@@ -103,6 +105,7 @@ export default class CatInfo extends React.Component {
       height: newHeight,
       heightState: 0
     })
+    this.updateCat()
   }
 
   lengthClick () {
@@ -116,29 +119,43 @@ export default class CatInfo extends React.Component {
       length: event,
       lengthState: 0
     })
+    this.updateCat()
   }
 
   updateCat () {
-    console.log('Updated Cat Info')
+    //console.log('Updated Cat Info')
+//     Body:
+// {
+//     "petID": 1,
+//     "name": "Fluffy",
+//     "animalTypeID": 1,
+//     "breed": 1,
+//     "gender": 1,
+//     "dateOfBirth": "2016-10-23",
+//     "weight": 15.2,
+//     "height": 5.12,
+//     "length": 13.56,
+//     "declawed": "true",
+//     "outdoor": "false",
+//     "fixed": "true"
+// }
 
-    // var postObj = {
-    //   'name': this.state.name,
-    //   'animalTypeID': '1',
-    //   'breed': this.state.breed,
-    //   'gender': this.state.gender,
-    //   'dateOfBirth': this.state.dob,
-    //   'weight': this.state.weight,
-    //   'height': this.state.height,
-    //   'length': this.state.length,
-    //   'declawed': 'false',
-    //   'outdoor': 'false',
-    //   'fixed': 'false'
-    // }
-
-    // db.post('/pet/update', postObj)
-    // .then((response) => window.alert(JSON.stringify(response.data)))
-
-    //waiting on Database team
+    var postObj = {
+      "petID": this.props.data,
+      'name': this.state.name,
+      'animalTypeID': '1',
+      'breed': this.state.breed,
+      'gender': this.state.gender,
+      'dateOfBirth': this.state.dob,
+      'weight': this.state.weight,
+      'height': this.state.height,
+      'length': this.state.length,
+      'declawed': 'false',
+      'outdoor': 'false',
+      'fixed': 'false'
+    }
+    db.put('/pet/update', postObj)
+    .then((response) => window.alert(JSON.stringify(response.data)))
   }
 
   render () {
@@ -236,6 +253,10 @@ export default class CatInfo extends React.Component {
 
           <RoundedButton onPress={NavigationActions.accountInfo}>
             View Owner
+          </RoundedButton>
+
+          <RoundedButton onPress={NavigationActions.shareCat}>
+            Share Cat
           </RoundedButton>
 
         </ScrollView>
