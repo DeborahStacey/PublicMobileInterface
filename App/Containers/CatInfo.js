@@ -73,9 +73,9 @@ export default class CatInfo extends React.Component {
     .catch((error) => window.alert(error))
   }
 
-  updateName (event) {
+  updateName (newName) {
     this.setState({
-      name: event
+      name: newName
     })
   }
 
@@ -98,9 +98,9 @@ export default class CatInfo extends React.Component {
     })
   }
 
-  updateHeight (event) {
+  updateHeight (newHeight) {
     this.setState({
-      height: event,
+      height: newHeight,
       heightState: 0
     })
   }
@@ -120,6 +120,25 @@ export default class CatInfo extends React.Component {
 
   updateCat () {
     console.log('Updated Cat Info')
+
+    // var postObj = {
+    //   'name': this.state.name,
+    //   'animalTypeID': '1',
+    //   'breed': this.state.breed,
+    //   'gender': this.state.gender,
+    //   'dateOfBirth': this.state.dob,
+    //   'weight': this.state.weight,
+    //   'height': this.state.height,
+    //   'length': this.state.length,
+    //   'declawed': 'false',
+    //   'outdoor': 'false',
+    //   'fixed': 'false'
+    // }
+
+    // db.post('/pet/update', postObj)
+    // .then((response) => window.alert(JSON.stringify(response.data)))
+
+    //waiting on Database team
   }
 
   render () {
