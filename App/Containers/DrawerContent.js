@@ -1,9 +1,15 @@
 import React, { Component } from 'react'
-import { ScrollView, Image, BackAndroid } from 'react-native'
+import { ScrollView, Image, BackAndroid, Alert } from 'react-native'
 import styles from './Styles/DrawerContentStyle'
 import { Images } from '../Themes'
 import DrawerButton from '../Components/DrawerButton'
 import { Actions as NavigationActions } from 'react-native-router-flux'
+import { create } from 'apisauce'
+
+const db = create({
+  baseURL: 'https://cat.ddns.net/Backend/api.php',
+  headers: {'Content-Type': 'application/json'}
+})
 
 class DrawerContent extends Component {
 
@@ -46,6 +52,32 @@ class DrawerContent extends Component {
     NavigationActions.deviceInfo()
   }
 
+  handleSignOut = () => {
+    Alert.alert(
+      'Confirm',
+      'Are you sure you want to sign out?',
+      [
+        {
+          text: 'Sign Out',
+          onPress: () => {
+            db.post('/user/logout').then((response) => {
+              if (response.ok) {
+                NavigationActions.signIn()
+                this.toggleDrawer()
+                Alert.alert('Signed out successfully')
+              } else {
+                Alert.alert('An error has occurred')
+              }
+            })
+          }
+        },
+        {
+          text: 'Cancel'
+        }
+      ]
+    )
+  }
+
   render () {
     return (
       <ScrollView style={styles.container}>
@@ -53,11 +85,10 @@ class DrawerContent extends Component {
         <DrawerButton text='Home' onPress={NavigationActions.presentationScreen} />
         <DrawerButton text='Account' onPress={NavigationActions.accountInfo} />
         <DrawerButton text='Cats' onPress={NavigationActions.catList} />
-        <DrawerButton text='Sign Out' onPress={this.handlePressDevice} />
+        <DrawerButton text='Sign Out' onPress={this.handleSignOut} />
       </ScrollView>
     )
   }
-
 }
 
 DrawerContent.contextTypes = {
