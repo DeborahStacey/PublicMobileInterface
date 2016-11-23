@@ -1,6 +1,5 @@
 import React from 'react'
 import { ScrollView, Text, Image, View } from 'react-native'
-import { Images } from '../Themes'
 import RoundedButton from '../Components/RoundedButton'
 // import {create} from 'apisauce'
 import { Actions as NavigationActions } from 'react-native-router-flux'
@@ -36,7 +35,6 @@ export default class CatInfo extends React.Component {
   render () {
     return (
       <View style={styles.mainContainer}>
-        <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
         <ScrollView style={styles.container}>
 
           <View style={styles.messageBox}>

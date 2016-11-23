@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import { ScrollView, Image, BackAndroid, Alert } from 'react-native'
+import { ScrollView, BackAndroid, Alert } from 'react-native'
 import styles from './Styles/DrawerContentStyle'
-import { Images } from '../Themes'
 import DrawerButton from '../Components/DrawerButton'
 import { Actions as NavigationActions } from 'react-native-router-flux'
 import { create } from 'apisauce'
@@ -81,7 +80,6 @@ class DrawerContent extends Component {
   render () {
     return (
       <ScrollView style={styles.container}>
-        <Image source={Images.logo} style={styles.logo} />
         <DrawerButton text='Home' onPress={NavigationActions.presentationScreen} />
         <DrawerButton text='Account' onPress={NavigationActions.accountInfo} />
         <DrawerButton text='Cats' onPress={NavigationActions.catList} />

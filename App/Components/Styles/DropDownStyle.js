@@ -12,14 +12,14 @@ export default StyleSheet.create({
     borderColor: 'grey'
   },
   contents: {
-    color: 'white',
+    color: 'black',
     flexGrow: 95
   },
   contentsIOS: {
     flexGrow: 95
   },
   item: {
-    color: 'white'
+    color: 'black'
   },
   hackPadding: {
     flexGrow: 5,

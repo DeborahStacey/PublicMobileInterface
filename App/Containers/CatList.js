@@ -1,6 +1,5 @@
 import React from 'react'
-import { ScrollView, Text, Image, View } from 'react-native'
-import { Images } from '../Themes'
+import { ScrollView, Text, View } from 'react-native'
 import CatCard from '../Components/CatCard'
 import { Actions as NavigationActions } from 'react-native-router-flux'
 import {create} from 'apisauce'
@@ -52,7 +51,6 @@ export default class CatList extends React.Component {
 
     return (
       <View style={styles.mainContainer}>
-        <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
         <ScrollView style={styles.container}>
 
           <View style={styles.messageBox}>

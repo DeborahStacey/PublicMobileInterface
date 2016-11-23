@@ -1,9 +1,7 @@
 import React from 'react'
 import { ScrollView, Text, Image, View } from 'react-native'
-import { Images } from '../Themes'
 import RoundedButton from '../Components/RoundedButton'
 import { Actions as NavigationActions } from 'react-native-router-flux'
-import Button from 'react-native-button'
 
 // Styles
 import styles from './Styles/PresentationScreenStyle'
@@ -25,7 +23,6 @@ export default class AccountInfo extends React.Component {
   render () {
     return (
       <View style={styles.mainContainer}>
-        <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
         <ScrollView style={styles.container}>
           <View style={styles.centered}>
             <Image source={require('../Images/PogChamp.png')} style={styles.profileImage} />
@@ -41,12 +38,12 @@ export default class AccountInfo extends React.Component {
           <Text style={styles.infoTitleText}>Cat Owner?</Text>
           <Text style={styles.infoText}>        Yes</Text>
 
-          <Button style={{textAlign: 'left', fontSize: 20, color: 'green', paddingLeft: 10}} styleDisabled={{color: 'red'}} onPress={NavigationActions.catList}>
+          <RoundedButton style={{textAlign: 'left', fontSize: 20, color: 'green', paddingLeft: 10}} styleDisabled={{color: 'red'}} onPress={NavigationActions.catList}>
                     View Cats
-          </Button>
-          <Button style={{textAlign: 'left', fontSize: 20, color: 'green', paddingLeft: 10, paddingBottom: 45}} styleDisabled={{color: 'red'}} onPress={() => this._handlePress()}>
+          </RoundedButton>
+          <RoundedButton style={{textAlign: 'left', fontSize: 20, color: 'green', paddingLeft: 10, paddingBottom: 45}} styleDisabled={{color: 'red'}} onPress={() => this._handlePress()}>
                     View Cat Groups
-          </Button>
+          </RoundedButton>
 
           <RoundedButton onPress={() => this._handlePress()}>
             Edit

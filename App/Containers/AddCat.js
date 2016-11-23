@@ -1,8 +1,8 @@
 import React from 'react'
-import { ScrollView, Text, Image, View, TextInput } from 'react-native'
-import { Images } from '../Themes'
+import { ScrollView, Text, View, TextInput } from 'react-native'
 import RoundedButton from '../Components/RoundedButton'
 import DropDown from '../Components/DropDown'
+import { Colors } from '../Themes'
 // import { Actions as NavigationActions } from 'react-native-router-flux'
 import {create} from 'apisauce'
 
@@ -126,14 +126,13 @@ export default class AddCat extends React.Component {
   render () {
     return (
       <View style={styles.mainContainer}>
-        <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
         <ScrollView style={styles.container}>
 
           <View style={styles.messageBox}>
             <View style={styles.messageBoxContents}>
 
               <Text style={styles.sectionText}>Name</Text>
-              <TextInput onChangeText={this.updateName.bind(this)} placeholder='Enter your cat&apos;s name' placeholderTextColor='white' style={styles.sectionInput} />
+              <TextInput onChangeText={this.updateName.bind(this)} placeholder='Enter your cat&apos;s name' placeholderTextColor={Colors.placeholderText} style={styles.sectionInput} />
 
               <Text style={styles.sectionText}>Breed</Text>
               <DropDown options={this.state.breeds} onValueChange={this.updateBreed.bind(this)} selectedValue={this.state.breed} />
@@ -142,13 +141,13 @@ export default class AddCat extends React.Component {
               <DropDown options={this.state.genders} onValueChange={this.updateGender.bind(this)} selectedValue={this.state.gender} />
 
               <Text style={styles.sectionText}>Weight</Text>
-              <TextInput onChangeText={this.updateWeight.bind(this)} placeholder='Enter your cat&apos;s weight (lbs)' placeholderTextColor='white' style={styles.sectionInput} />
+              <TextInput onChangeText={this.updateWeight.bind(this)} placeholder='Enter your cat&apos;s weight (lbs)' placeholderTextColor={Colors.placeholderText} style={styles.sectionInput} />
 
               <Text style={styles.sectionText}>Height</Text>
-              <TextInput onChangeText={this.updateHeight.bind(this)} placeholder='Enter your cat&apos;s height (cm)' placeholderTextColor='white' style={styles.sectionInput} />
+              <TextInput onChangeText={this.updateHeight.bind(this)} placeholder='Enter your cat&apos;s height (cm)' placeholderTextColor={Colors.placeholderText} style={styles.sectionInput} />
 
               <Text style={styles.sectionText}>Length</Text>
-              <TextInput onChangeText={this.updateLength.bind(this)} placeholder='Enter your cat&apos;s length (cm)' placeholderTextColor='white' style={styles.sectionInput} />
+              <TextInput onChangeText={this.updateLength.bind(this)} placeholder='Enter your cat&apos;s length (cm)' placeholderTextColor={Colors.placeholderText} style={styles.sectionInput} />
 
             </View>
           </View>

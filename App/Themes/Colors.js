@@ -1,5 +1,10 @@
 const colors = {
-  background: '#1F0808',
+  background: '#F1F5FF',
+  navigation: '#466ECC',
+  button: '#466ECC',
+  mainText: '#2C457F',
+  drawerText: '#2C457F',
+  placeholderText: '#787A7F',
   clear: 'rgba(0,0,0,0)',
   facebook: '#3b5998',
   transparent: 'rgba(0,0,0,0)',
@@ -15,9 +20,11 @@ const colors = {
   coal: '#2d2d2d',
   bloodOrange: '#fb5f26',
   snow: 'white',
-  ember: 'rgba(164, 0, 48, 0.5)',
   fire: '#e73536',
-  drawer: 'rgba(30, 30, 29, 0.95)'
+  drawer: 'rgba(30, 30, 29, 0.95)',
+  batteryFull: '#48DC4C',
+  batteryMedium: '#EA9530',
+  batteryLow: '#E31A1A'
 }
 
 export default colors

@@ -1,31 +1,16 @@
 'use strict'
 
 import { StyleSheet } from 'react-native'
+import { Colors } from '../../Themes'
 
 export default StyleSheet.create({
-  catCardMale: {
+  catCard: {
     flexDirection: 'column',
     flexWrap: 'wrap',
     borderRadius: 5,
     borderWidth: 2,
     borderColor: 'grey',
-    backgroundColor: 'blue'
-  },
-  catCardFemale: {
-    flexDirection: 'column',
-    flexWrap: 'wrap',
-    borderRadius: 5,
-    borderWidth: 2,
-    borderColor: 'grey',
-    backgroundColor: '#ac00e0'
-  },
-  catCardOther: {
-    flexDirection: 'column',
-    flexWrap: 'wrap',
-    borderRadius: 5,
-    borderWidth: 2,
-    borderColor: 'grey',
-    backgroundColor: 'green'
+    backgroundColor: Colors.mainText
   },
   innerContents: {
     flexDirection: 'row'
