@@ -127,7 +127,7 @@ export default class CatInfo extends React.Component {
   }
 
   updateCat () {
-    //console.log('Updated Cat Info')
+    // console.log('Updated Cat Info')
 //     Body:
 // {
 //     "petID": 1,
@@ -145,7 +145,7 @@ export default class CatInfo extends React.Component {
 // }
 
     var postObj = {
-      "petID": this.props.data,
+      'petID': this.props.data,
       'name': this.state.name,
       'animalTypeID': '1',
       'breed': this.state.breed,
@@ -231,7 +231,7 @@ export default class CatInfo extends React.Component {
             <View style={styles.messageBoxContents}>
 
               <View style={styles.centered}>
-                <Image source={require('../Images/datCat.png')} style={styles.profileImage} />
+                <Image source={Images.datCat} style={styles.profileImage} />
               </View>
 
               <Text style={styles.infoTitleText}>Name</Text>

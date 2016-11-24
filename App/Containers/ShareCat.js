@@ -1,18 +1,18 @@
 import React from 'react'
 import { ScrollView, Text, Image, View, TextInput } from 'react-native'
 import { Images } from '../Themes'
-import RoundedButton from '../Components/RoundedButton'
-import DropDown from '../Components/DropDown'
+// import RoundedButton from '../Components/RoundedButton'
+// import DropDown from '../Components/DropDown'
 // import { Actions as NavigationActions } from 'react-native-router-flux'
-import {create} from 'apisauce'
+// import {create} from 'apisauce'
 
 // Styles
 import styles from './Styles/PresentationScreenStyle'
 
-const db = create({
-  baseURL: 'https://cat.ddns.net/Backend/api.php',
-  headers: {'Content-Type': 'application/json'}
-})
+// const db = create({
+//   baseURL: 'https://cat.ddns.net/Backend/api.php',
+//   headers: {'Content-Type': 'application/json'}
+// })
 
 export default class ShareCat extends React.Component {
 
@@ -33,7 +33,7 @@ export default class ShareCat extends React.Component {
   }
 
   componentWillMount () {
-    var that = this
+    // var that = this
   }
 
   updateShareToEmail (newEmail) {
@@ -43,7 +43,7 @@ export default class ShareCat extends React.Component {
   }
 
   render () {
-  	return (
+    return (
       <View style={styles.mainContainer}>
         <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
         <ScrollView style={styles.container}>

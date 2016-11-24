@@ -1,6 +1,7 @@
 'use strict'
 
 import { StyleSheet } from 'react-native'
+import { Colors } from '../../Themes'
 
 export default StyleSheet.create({
   sliderStyle: {
@@ -22,6 +23,6 @@ export default StyleSheet.create({
     paddingRight: 10
   },
   sliderValue: {
-    color: 'white'
+    color: Colors.mainText
   }
 })

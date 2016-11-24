@@ -2,7 +2,8 @@
 const images = {
   clearLogo: require('../Images/cat.png'),
   ignite: require('../Images/ignite_logo.png'),
-  tileBg: require('../Images/tile_bg.png')
+  tileBg: require('../Images/tile_bg.png'),
+  datCat: require('../Images/datCat.png')
 }
 
 export default images
