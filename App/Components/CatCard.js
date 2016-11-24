@@ -30,19 +30,9 @@ export default class CatCard extends React.Component {
   }
 
   render () {
-    var CatCardStyle
-
-    if (this.state.gender === 1) {
-      CatCardStyle = styles.catCardMale
-    } else if (this.state.gender === 2) {
-      CatCardStyle = styles.catCardFemale
-    } else {
-      CatCardStyle = styles.catCardOther
-    }
-
     return (
       <TouchableOpacity onPress={this.cardClick.bind(this)} style={styles.outter}>
-        <View style={CatCardStyle}>
+        <View style={styles.catCard}>
           <View style={styles.innerContents}>
             <View style={styles.textContents}>
               <Text style={styles.name}>{this.state.name}</Text>

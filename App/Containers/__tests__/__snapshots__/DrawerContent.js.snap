@@ -6,13 +6,6 @@ exports[`test renders correctly 1`] = `
       "padding": 20,
     }
   }>
-  <Image
-    source={1}
-    style={
-      Object {
-        "alignSelf": "center",
-      }
-    } />
   <View
     accessibilityComponentType={undefined}
     accessibilityLabel={undefined}
@@ -38,7 +31,7 @@ exports[`test renders correctly 1`] = `
       ellipsizeMode="tail"
       style={
         Object {
-          "color": "white",
+          "color": "#2C457F",
           "fontFamily": "HelveticaNeue",
           "fontSize": 20,
           "marginVertical": 10,
@@ -72,7 +65,7 @@ exports[`test renders correctly 1`] = `
       ellipsizeMode="tail"
       style={
         Object {
-          "color": "white",
+          "color": "#2C457F",
           "fontFamily": "HelveticaNeue",
           "fontSize": 20,
           "marginVertical": 10,
@@ -106,7 +99,7 @@ exports[`test renders correctly 1`] = `
       ellipsizeMode="tail"
       style={
         Object {
-          "color": "white",
+          "color": "#2C457F",
           "fontFamily": "HelveticaNeue",
           "fontSize": 20,
           "marginVertical": 10,
@@ -140,7 +133,7 @@ exports[`test renders correctly 1`] = `
       ellipsizeMode="tail"
       style={
         Object {
-          "color": "white",
+          "color": "#2C457F",
           "fontFamily": "HelveticaNeue",
           "fontSize": 20,
           "marginVertical": 10,

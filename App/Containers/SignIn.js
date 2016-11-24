@@ -1,6 +1,6 @@
 import React from 'react'
 import { ScrollView, Text, Image, View, TextInput } from 'react-native'
-import { Images } from '../Themes'
+import { Images, Colors } from '../Themes'
 import RoundedButton from '../Components/RoundedButton'
 import { Actions as NavigationActions } from 'react-native-router-flux'
 import {create} from 'apisauce'
@@ -74,9 +74,9 @@ export default class SignIn extends React.Component {
           <View style={styles.messageBox}>
             <View style={styles.messageBoxContents}>
               <Text style={styles.sectionText}>Email</Text>
-              <TextInput ref='1' onSubmitEditing={() => this.focusNextField('2')} returnKeyType='next' onChangeText={this.updateEmail.bind(this)} placeholder='Enter your email' placeholderTextColor='white' style={styles.sectionInput} keyboardType='email-address' />
+              <TextInput ref='1' onSubmitEditing={() => this.focusNextField('2')} returnKeyType='next' onChangeText={this.updateEmail.bind(this)} placeholder='Enter your email' placeholderTextColor={Colors.placeholderText} style={styles.sectionInput} keyboardType='email-address' />
               <Text style={styles.sectionText}>Password</Text>
-              <TextInput ref='2' onSubmitEditing={this.signInUser.bind(this)} returnKeyType='done' onChangeText={this.updatePassword.bind(this)} placeholder='Enter your password' placeholderTextColor='white' style={styles.sectionInput} secureTextEntry />
+              <TextInput ref='2' onSubmitEditing={this.signInUser.bind(this)} returnKeyType='done' onChangeText={this.updatePassword.bind(this)} placeholder='Enter your password' placeholderTextColor={Colors.placeholderText} style={styles.sectionInput} secureTextEntry />
             </View>
           </View>
 

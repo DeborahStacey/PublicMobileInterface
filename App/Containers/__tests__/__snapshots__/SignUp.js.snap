@@ -2,14 +2,14 @@ exports[`test renders correctly 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "rgba(0,0,0,0)",
+      "backgroundColor": "#F1F5FF",
       "flex": 1,
       "marginTop": 64,
     }
   }>
   <Image
     resizeMode="stretch"
-    source={1}
+    source={undefined}
     style={
       Object {
         "bottom": 0,
@@ -36,7 +36,7 @@ exports[`test renders correctly 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
-              "color": "white",
+              "color": "#2C457F",
               "fontWeight": "bold",
               "marginVertical": 5,
               "textAlign": "center",
@@ -52,7 +52,7 @@ exports[`test renders correctly 1`] = `
           returnKeyType="next"
           style={
             Object {
-              "color": "white",
+              "color": "#2C457F",
               "fontSize": 14,
               "fontWeight": "bold",
               "height": 50,
@@ -65,7 +65,7 @@ exports[`test renders correctly 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
-              "color": "white",
+              "color": "#2C457F",
               "fontWeight": "bold",
               "marginVertical": 5,
               "textAlign": "center",
@@ -81,7 +81,7 @@ exports[`test renders correctly 1`] = `
           returnKeyType="next"
           style={
             Object {
-              "color": "white",
+              "color": "#2C457F",
               "fontSize": 14,
               "fontWeight": "bold",
               "height": 50,
@@ -94,7 +94,7 @@ exports[`test renders correctly 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
-              "color": "white",
+              "color": "#2C457F",
               "fontWeight": "bold",
               "marginVertical": 5,
               "textAlign": "center",
@@ -111,7 +111,7 @@ exports[`test renders correctly 1`] = `
           returnKeyType="next"
           style={
             Object {
-              "color": "white",
+              "color": "#2C457F",
               "fontSize": 14,
               "fontWeight": "bold",
               "height": 50,
@@ -124,7 +124,7 @@ exports[`test renders correctly 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
-              "color": "white",
+              "color": "#2C457F",
               "fontWeight": "bold",
               "marginVertical": 5,
               "textAlign": "center",
@@ -141,7 +141,7 @@ exports[`test renders correctly 1`] = `
           secureTextEntry={true}
           style={
             Object {
-              "color": "white",
+              "color": "#2C457F",
               "fontSize": 14,
               "fontWeight": "bold",
               "height": 50,
@@ -154,7 +154,7 @@ exports[`test renders correctly 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
-              "color": "white",
+              "color": "#2C457F",
               "fontWeight": "bold",
               "marginVertical": 5,
               "textAlign": "center",
@@ -170,7 +170,7 @@ exports[`test renders correctly 1`] = `
           returnKeyType="done"
           style={
             Object {
-              "color": "white",
+              "color": "#2C457F",
               "fontSize": 14,
               "fontWeight": "bold",
               "height": 50,
@@ -194,7 +194,7 @@ exports[`test renders correctly 1`] = `
       onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "#e73536",
+          "backgroundColor": "#466ECC",
           "borderRadius": 5,
           "height": 45,
           "justifyContent": "center",

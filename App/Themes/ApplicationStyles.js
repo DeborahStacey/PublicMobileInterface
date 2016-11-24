@@ -10,7 +10,7 @@ const ApplicationStyles = {
     mainContainer: {
       flex: 1,
       marginTop: Metrics.navBarHeight,
-      backgroundColor: Colors.transparent
+      backgroundColor: Colors.background
     },
     backgroundImage: {
       position: 'absolute',
@@ -40,26 +40,26 @@ const ApplicationStyles = {
       borderBottomWidth: 1
     },
     sectionText: {
-      color: Colors.snow,
+      color: Colors.mainText,
       marginVertical: Metrics.smallMargin,
       textAlign: 'center',
       fontWeight: 'bold'
     },
     infoTitleText: {
-      color: Colors.snow,
+      color: Colors.mainText,
       marginVertical: Metrics.smallMargin,
       textAlign: 'left',
       fontWeight: 'bold',
       fontSize: 24
     },
     infoText: {
-      color: Colors.snow,
+      color: Colors.mainText,
       marginVertical: Metrics.smallMargin,
       textAlign: 'left',
       fontSize: 18
     },
     sectionInput: {
-      color: Colors.snow,
+      color: Colors.mainText,
       marginVertical: Metrics.smallMargin,
       fontWeight: 'bold',
       fontSize: 14,
@@ -94,7 +94,7 @@ const ApplicationStyles = {
     marginTop: Metrics.smallMargin,
     marginHorizontal: Metrics.baseMargin,
     borderWidth: 1,
-    borderColor: Colors.ember,
+    borderColor: Colors.silver,
     alignItems: 'center',
     textAlign: 'center'
   }

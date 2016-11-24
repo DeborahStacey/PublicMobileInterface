@@ -2,23 +2,11 @@ exports[`test renders correctly 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "rgba(0,0,0,0)",
+      "backgroundColor": "#F1F5FF",
       "flex": 1,
       "marginTop": 64,
     }
   }>
-  <Image
-    resizeMode="stretch"
-    source={1}
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    } />
   <ScrollView
     style={
       Object {
@@ -36,7 +24,7 @@ exports[`test renders correctly 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
-              "color": "white",
+              "color": "#2C457F",
               "fontWeight": "bold",
               "marginVertical": 5,
               "textAlign": "center",
@@ -46,11 +34,11 @@ exports[`test renders correctly 1`] = `
         </Text>
         <TextInput
           onChangeText={[Function]}
-          placeholder="Enter your cats name"
-          placeholderTextColor="white"
+          placeholder="Enter your cat\'s name"
+          placeholderTextColor="#787A7F"
           style={
             Object {
-              "color": "white",
+              "color": "#2C457F",
               "fontSize": 14,
               "fontWeight": "bold",
               "height": 50,
@@ -63,7 +51,7 @@ exports[`test renders correctly 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
-              "color": "white",
+              "color": "#2C457F",
               "fontWeight": "bold",
               "marginVertical": 5,
               "textAlign": "center",
@@ -85,7 +73,7 @@ exports[`test renders correctly 1`] = `
           <Picker
             itemStyle={
               Object {
-                "color": "white",
+                "color": "black",
               }
             }
             onValueChange={[Function]}
@@ -112,7 +100,7 @@ exports[`test renders correctly 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
-              "color": "white",
+              "color": "#2C457F",
               "fontWeight": "bold",
               "marginVertical": 5,
               "textAlign": "center",
@@ -134,7 +122,7 @@ exports[`test renders correctly 1`] = `
           <Picker
             itemStyle={
               Object {
-                "color": "white",
+                "color": "black",
               }
             }
             onValueChange={[Function]}
@@ -161,7 +149,7 @@ exports[`test renders correctly 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
-              "color": "white",
+              "color": "#2C457F",
               "fontWeight": "bold",
               "marginVertical": 5,
               "textAlign": "center",
@@ -171,11 +159,11 @@ exports[`test renders correctly 1`] = `
         </Text>
         <TextInput
           onChangeText={[Function]}
-          placeholder="Enter your cats weight"
-          placeholderTextColor="white"
+          placeholder="Enter your cat\'s weight (lbs)"
+          placeholderTextColor="#787A7F"
           style={
             Object {
-              "color": "white",
+              "color": "#2C457F",
               "fontSize": 14,
               "fontWeight": "bold",
               "height": 50,
@@ -188,7 +176,7 @@ exports[`test renders correctly 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
-              "color": "white",
+              "color": "#2C457F",
               "fontWeight": "bold",
               "marginVertical": 5,
               "textAlign": "center",
@@ -198,11 +186,11 @@ exports[`test renders correctly 1`] = `
         </Text>
         <TextInput
           onChangeText={[Function]}
-          placeholder="Enter your cats height"
-          placeholderTextColor="white"
+          placeholder="Enter your cat\'s height (cm)"
+          placeholderTextColor="#787A7F"
           style={
             Object {
-              "color": "white",
+              "color": "#2C457F",
               "fontSize": 14,
               "fontWeight": "bold",
               "height": 50,
@@ -215,7 +203,7 @@ exports[`test renders correctly 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
-              "color": "white",
+              "color": "#2C457F",
               "fontWeight": "bold",
               "marginVertical": 5,
               "textAlign": "center",
@@ -225,11 +213,11 @@ exports[`test renders correctly 1`] = `
         </Text>
         <TextInput
           onChangeText={[Function]}
-          placeholder="Enter your cats length"
-          placeholderTextColor="white"
+          placeholder="Enter your cat\'s length (cm)"
+          placeholderTextColor="#787A7F"
           style={
             Object {
-              "color": "white",
+              "color": "#2C457F",
               "fontSize": 14,
               "fontWeight": "bold",
               "height": 50,
@@ -253,7 +241,7 @@ exports[`test renders correctly 1`] = `
       onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "#e73536",
+          "backgroundColor": "#466ECC",
           "borderRadius": 5,
           "height": 45,
           "justifyContent": "center",
