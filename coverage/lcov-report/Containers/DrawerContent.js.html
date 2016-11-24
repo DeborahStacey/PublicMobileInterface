@@ -20,24 +20,24 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">16.67% </span>
+        <span class="strong">15.38% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>3/18</span>
+        <span class='fraction'>4/26</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/2</span>
-      </div>
-      <div class='fl pad1y space-right2'>
-        <span class="strong">22.22% </span>
-        <span class="quiet">Functions</span>
-        <span class='fraction'>2/9</span>
+        <span class='fraction'>0/4</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">16.67% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">15.38% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>3/18</span>
+        <span class='fraction'>4/26</span>
       </div>
     </div>
   </div>
@@ -110,9 +110,43 @@
 65
 66
 67
-68</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -159,9 +193,33 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -178,11 +236,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react'
-import { ScrollView, Image, BackAndroid } from 'react-native'
+import { ScrollView, BackAndroid, Alert } from 'react-native'
 import styles from './Styles/DrawerContentStyle'
-import { Images } from '../Themes'
 import DrawerButton from '../Components/DrawerButton'
 import { Actions as NavigationActions } from 'react-native-router-flux'
+import { create } from 'apisauce'
+&nbsp;
+const db = create({
+  baseURL: 'https://cat.ddns.net/Backend/api.php',
+  headers: {'Content-Type': 'application/json'}
+})
 &nbsp;
 class DrawerContent extends Component {
 &nbsp;
@@ -225,18 +288,42 @@ class DrawerContent extends Component {
 <span class="cstat-no" title="statement not covered" >    NavigationActions.deviceInfo()</span>
   }
 &nbsp;
-  render () {
-    return (
-      &lt;ScrollView style={styles.container}&gt;
-        &lt;Image source={Images.logo} style={styles.logo} /&gt;
-        &lt;DrawerButton text='Home' onPress={NavigationActions.presentationScreen} /&gt;
-        &lt;DrawerButton text='Account' onPress={NavigationActions.accountInfo} /&gt;
-        &lt;DrawerButton text='Cats' onPress={NavigationActions.catList} /&gt;
-        &lt;DrawerButton text='Sign Out' onPress={this.handlePressDevice} /&gt;
-      &lt;/ScrollView&gt;
+  handleSignOut = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >    Alert.alert(</span>
+      'Confirm',
+      'Are you sure you want to sign out?',
+      [
+        {
+          text: 'Sign Out',
+          onPress: <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >            db.post('/user/logout').then(<span class="fstat-no" title="function not covered" >(r</span>esponse) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >              if (response.ok) {</span>
+<span class="cstat-no" title="statement not covered" >                NavigationActions.signIn()</span>
+<span class="cstat-no" title="statement not covered" >                this.toggleDrawer()</span>
+<span class="cstat-no" title="statement not covered" >                Alert.alert('Signed out successfully')</span>
+              } else {
+<span class="cstat-no" title="statement not covered" >                Alert.alert('An error has occurred')</span>
+              }
+            })
+          }
+        },
+        {
+          text: 'Cancel'
+        }
+      ]
     )
   }
 &nbsp;
+  render () {
+    return (
+      &lt;ScrollView style={styles.container}&gt;
+        &lt;DrawerButton text='Home' onPress={NavigationActions.presentationScreen} /&gt;
+        &lt;DrawerButton text='Account' onPress={NavigationActions.accountInfo} /&gt;
+        &lt;DrawerButton text='Cats' onPress={NavigationActions.catList} /&gt;
+        &lt;DrawerButton text='Sign Out' onPress={this.handleSignOut} /&gt;
+      &lt;/ScrollView&gt;
+    )
+  }
 }
 &nbsp;
 DrawerContent.contextTypes = {
@@ -250,7 +337,7 @@ export default DrawerContent
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Nov 15 2016 10:08:49 GMT-0500 (EST)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Nov 24 2016 08:42:27 GMT-0500 (EST)
 </div>
 </div>
 <script src="../prettify.js"></script>
