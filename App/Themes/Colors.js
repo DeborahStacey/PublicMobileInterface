@@ -24,7 +24,8 @@ const colors = {
   drawer: 'rgba(30, 30, 29, 0.95)',
   batteryFull: '#48DC4C',
   batteryMedium: '#EA9530',
-  batteryLow: '#E31A1A'
+  batteryLow: '#E31A1A',
+  black: '#000000'
 }
 
 export default colors

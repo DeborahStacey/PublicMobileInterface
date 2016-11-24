@@ -15,7 +15,6 @@ export default class CatCard extends React.Component {
   }
 
   componentDidMount () {
-    console.log(this.props.basicCatInfo.name)
     var catInfo = this.props.basicCatInfo
     this.setState({
       name: catInfo.name,
