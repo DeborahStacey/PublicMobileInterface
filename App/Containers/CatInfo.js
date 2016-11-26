@@ -127,23 +127,6 @@ export default class CatInfo extends React.Component {
   }
 
   updateCat () {
-    // console.log('Updated Cat Info')
-//     Body:
-// {
-//     "petID": 1,
-//     "name": "Fluffy",
-//     "animalTypeID": 1,
-//     "breed": 1,
-//     "gender": 1,
-//     "dateOfBirth": "2016-10-23",
-//     "weight": 15.2,
-//     "height": 5.12,
-//     "length": 13.56,
-//     "declawed": "true",
-//     "outdoor": "false",
-//     "fixed": "true"
-// }
-
     var postObj = {
       'petID': this.props.data,
       'name': this.state.name,
@@ -160,6 +143,14 @@ export default class CatInfo extends React.Component {
     }
     db.put('/pet/update', postObj)
     .then((response) => window.alert(JSON.stringify(response.data)))
+  }
+
+  shareClick () {
+    var shareInfo = {
+      'name': this.state.name,
+      'id': this.props.data
+    }
+    NavigationActions.shareCat(shareInfo)
   }
 
   render () {
@@ -259,7 +250,7 @@ export default class CatInfo extends React.Component {
             View Owner
           </RoundedButton>
 
-          <RoundedButton onPress={NavigationActions.shareCat}>
+          <RoundedButton onPress={this.shareClick.bind(this)}>
             Share Cat
           </RoundedButton>
 

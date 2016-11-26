@@ -12,6 +12,14 @@ export default StyleSheet.create({
     borderColor: 'grey',
     backgroundColor: Colors.mainText
   },
+  sharedCatCard: {
+    flexDirection: 'column',
+    flexWrap: 'wrap',
+    borderRadius: 5,
+    borderWidth: 2,
+    borderColor: 'grey',
+    backgroundColor: Colors.sharedCatColor
+  },
   innerContents: {
     flexDirection: 'row'
   },

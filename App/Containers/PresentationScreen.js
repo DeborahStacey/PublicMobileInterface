@@ -22,20 +22,16 @@ export default class PresentationScreen extends React.Component {
             </Text>
           </View>
 
+          <RoundedButton onPress={NavigationActions.catList}>
+            My Cats
+          </RoundedButton>
+
           <RoundedButton onPress={NavigationActions.addCat}>
             Add Cat
           </RoundedButton>
 
           <RoundedButton onPress={NavigationActions.accountInfo}>
             Account Info
-          </RoundedButton>
-
-          <RoundedButton onPress={NavigationActions.catInfo}>
-            Cat Info
-          </RoundedButton>
-
-          <RoundedButton onPress={NavigationActions.catList}>
-            My Cats
           </RoundedButton>
 
         </ScrollView>

@@ -29,9 +29,13 @@ export default class CatCard extends React.Component {
   }
 
   render () {
+    var cardStyle = styles.catCard
+    if (this.props.shared) {
+      cardStyle = styles.sharedCatCard
+    }
     return (
       <TouchableOpacity onPress={this.cardClick.bind(this)} style={styles.outter}>
-        <View style={styles.catCard}>
+        <View style={cardStyle}>
           <View style={styles.innerContents}>
             <View style={styles.textContents}>
               <Text style={styles.name}>{this.state.name}</Text>
@@ -50,5 +54,6 @@ export default class CatCard extends React.Component {
 // ex {"name": x, "value": y}
 CatCard.propTypes = {
   basicCatInfo: React.PropTypes.object.isRequired,
-  onClick: React.PropTypes.func.isRequired
+  onClick: React.PropTypes.func.isRequired,
+  shared: React.PropTypes.bool.isRequired
 }
