@@ -136,8 +136,6 @@ export default class AccountInfo extends React.Component {
           <TextInput onChangeText={this.updateCity.bind(this)} value={this.state.city} placeholder="City" placeholderTextColor='grey' style={styles.sectionInput} />
           <Text style={styles.infoTitleText}>Postal</Text>
           <TextInput onChangeText={this.updatePostal.bind(this)} value={this.state.postal} placeholder="Postal Code" placeholderTextColor='grey' style={styles.sectionInput} />
-          <Text style={styles.infoTitleText}>Cat Owner?</Text>
-          <Text style={styles.infoText}>        Yes</Text>
 
           <RoundedButton onPress={() => this.updateAccount(this.state.password)}>
             Update
