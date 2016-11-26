@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for Components/CatCard.js</title>
+    <title>Code coverage report for Components/NumericalSlider.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -16,7 +16,7 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../index.html">All files</a> / <a href="index.html">Components</a> CatCard.js
+      <a href="../index.html">All files</a> / <a href="index.html">Components</a> NumericalSlider.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
@@ -32,7 +32,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/4</span>
+        <span class='fraction'>0/5</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">14.29% </span>
@@ -97,16 +97,8 @@
 52
 53
 54
-55</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+55
+56</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -121,6 +113,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -132,6 +127,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -151,59 +149,64 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
-import { Image, View, Text, TouchableOpacity } from 'react-native'
-import styles from './Styles/CatCardStyle'
+import { View, Text, Slider } from 'react-native'
+import styles from './Styles/NumericalSliderStyle'
+import Button from 'react-native-button'
 &nbsp;
-export default class CatCard extends React.Component {
+export default class NumericalSlider extends React.Component {
 &nbsp;
 <span class="fstat-no" title="function not covered" >  co</span>nstructor (props) {
 <span class="cstat-no" title="statement not covered" >    super(props)</span>
 <span class="cstat-no" title="statement not covered" >    this.state = {</span>
-      name: '',
-      ownerName: '',
-      gender: '',
-      petId: ''
+      sliderValue: 0
     }
   }
 &nbsp;
 <span class="fstat-no" title="function not covered" >  co</span>mponentDidMount () {
-    var catInfo = <span class="cstat-no" title="statement not covered" >this.props.basicCatInfo</span>
 <span class="cstat-no" title="statement not covered" >    this.setState({</span>
-      name: catInfo.name,
-      ownerName: catInfo.firstname + ' ' + catInfo.lastname,
-      gender: catInfo.gender,
-      petId: catInfo.petid
+      sliderValue: this.props.initialValue
     })
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  ca</span>rdClick () {
-<span class="cstat-no" title="statement not covered" >    this.props.onClick(this.state.petId)</span>
+<span class="fstat-no" title="function not covered" >  bu</span>ttonClick () {
+<span class="cstat-no" title="statement not covered" >    this.props.onClick(this.state.sliderValue)</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  up</span>dateSlider (event) {
+<span class="cstat-no" title="statement not covered" >    this.setState({</span>
+      sliderValue: event
+    })
   }
 &nbsp;
 <span class="fstat-no" title="function not covered" >  re</span>nder () {
 <span class="cstat-no" title="statement not covered" >    return (</span>
-      &lt;TouchableOpacity onPress={this.cardClick.bind(this)} style={styles.outter}&gt;
-        &lt;View style={styles.catCard}&gt;
-          &lt;View style={styles.innerContents}&gt;
-            &lt;View style={styles.textContents}&gt;
-              &lt;Text style={styles.name}&gt;{this.state.name}&lt;/Text&gt;
-              &lt;Text style={styles.owner}&gt;{this.state.ownerName}&lt;/Text&gt;
-            &lt;/View&gt;
-            {/* pictures do not yet exist so this may be removed */}
-            &lt;Image source={require('../Images/datCat.png')} style={styles.catPicture} /&gt;
-          &lt;/View&gt;
+      &lt;View style={styles.sliderStyle}&gt;
+        &lt;Text style={styles.sliderValue}&gt;{this.state.sliderValue} {this.props.units}&lt;/Text&gt;
+        &lt;View style={styles.innerContents}&gt;
+          &lt;Slider style={styles.slider} minimumValue={this.props.minimumValue} maximumValue={this.props.maximumValue} step={this.props.step} value={this.props.initialValue} onValueChange={this.updateSlider.bind(this)} /&gt;
+          &lt;Button style={styles.button} onPress={this.buttonClick.bind(this)} &gt;
+            Save
+          &lt;/Button&gt;
         &lt;/View&gt;
-      &lt;/TouchableOpacity&gt;
+      &lt;/View&gt;
     )
   }
 }
 &nbsp;
 // Options should be an object with name and value inside of it
 // ex {"name": x, "value": y}
-CatCard.propTypes = {
-  basicCatInfo: React.PropTypes.object.isRequired,
-  onClick: React.PropTypes.func.isRequired
+NumericalSlider.propTypes = {
+  minimumValue: React.PropTypes.number.isRequired,
+  maximumValue: React.PropTypes.number.isRequired,
+  step: React.PropTypes.number.isRequired,
+  initialValue: React.PropTypes.number.isRequired,
+  onClick: React.PropTypes.func.isRequired,
+  units: React.PropTypes.string
 }
 &nbsp;</pre></td></tr>
 </table></pre>

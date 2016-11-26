@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { ScrollView, BackAndroid, Alert } from 'react-native'
 import styles from './Styles/DrawerContentStyle'
 import DrawerButton from '../Components/DrawerButton'
-import { Actions as NavigationActions } from 'react-native-router-flux'
+import { Actions as NavigationActions, ActionConst } from 'react-native-router-flux'
 import { create } from 'apisauce'
 
 const db = create({
@@ -61,7 +61,7 @@ class DrawerContent extends Component {
           onPress: () => {
             db.post('/user/logout').then((response) => {
               if (response.ok) {
-                NavigationActions.signIn()
+                NavigationActions.signIn({type: ActionConst.RESET})
                 this.toggleDrawer()
                 Alert.alert('Signed out successfully')
               } else {

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for Components/Styles/DropDownStyle.js</title>
+    <title>Code coverage report for Components/Styles/NumericalSliderStyle.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -16,7 +16,7 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../index.html">All files</a> / <a href="index.html">Components/Styles</a> DropDownStyle.js
+      <a href="../../index.html">All files</a> / <a href="index.html">Components/Styles</a> NumericalSliderStyle.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
@@ -102,29 +102,29 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict'
 &nbsp;
 import { StyleSheet } from 'react-native'
+import { Colors } from '../../Themes'
 &nbsp;
 export default StyleSheet.create({
-  dropStyle: {
-    flexDirection: 'row',
+  sliderStyle: {
+    flexDirection: 'column',
     flexWrap: 'wrap',
-    zIndex: 99,
-    borderRadius: 20,
-    borderWidth: 2,
-    borderColor: 'grey'
+    paddingLeft: 5,
+    paddingRight: 5,
+    paddingBottom: 5
   },
-  contents: {
-    color: 'black',
-    flexGrow: 95
+  innerContents: {
+    flexDirection: 'row'
   },
-  contentsIOS: {
-    flexGrow: 95
+  slider: {
+    flex: 80,
+    paddingLeft: 10
   },
-  item: {
-    color: 'black'
+  button: {
+    flex: 20,
+    paddingRight: 10
   },
-  hackPadding: {
-    flexGrow: 5,
-    paddingTop: 13
+  sliderValue: {
+    color: Colors.mainText
   }
 })
 &nbsp;</pre></td></tr>

@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1479994948181" clover="3.2.0">
-  <project timestamp="1479994948181" name="All files">
-    <metrics statements="162" coveredstatements="62" conditionals="35" coveredconditionals="8" methods="84" coveredmethods="23" elements="281" coveredelements="93" complexity="0" loc="162" ncloc="162" packages="7" files="26" classes="26">
+<coverage generated="1480118013645" clover="3.2.0">
+  <project timestamp="1480118013645" name="All files">
+    <metrics statements="221" coveredstatements="80" conditionals="49" coveredconditionals="13" methods="104" coveredmethods="24" elements="374" coveredelements="117" complexity="0" loc="221" ncloc="221" packages="7" files="28" classes="28">
       <package name="Components">
-        <metrics statements="33" coveredstatements="14" conditionals="6" coveredconditionals="3" methods="14" coveredmethods="5"/>
+        <metrics statements="39" coveredstatements="15" conditionals="6" coveredconditionals="3" methods="19" coveredmethods="5"/>
         <file name="CatCard.js" path="/Users/sjbowman/Desktop/CIS*4250/PublicMobileInterface/App/Components/CatCard.js">
-          <metrics statements="8" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+          <metrics statements="7" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
           <line num="8" count="0" type="stmt"/>
           <line num="9" count="0" type="stmt"/>
           <line num="18" count="0" type="stmt"/>
           <line num="19" count="0" type="stmt"/>
-          <line num="20" count="0" type="stmt"/>
-          <line num="29" count="0" type="stmt"/>
-          <line num="33" count="0" type="stmt"/>
-          <line num="52" count="1" type="stmt"/>
+          <line num="28" count="0" type="stmt"/>
+          <line num="32" count="0" type="stmt"/>
+          <line num="51" count="1" type="stmt"/>
         </file>
         <file name="DrawerButton.js" path="/Users/sjbowman/Desktop/CIS*4250/PublicMobileInterface/App/Components/DrawerButton.js">
           <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
@@ -39,14 +38,24 @@
           <line num="51" count="0" type="stmt"/>
           <line num="65" count="1" type="stmt"/>
         </file>
+        <file name="NumericalSlider.js" path="/Users/sjbowman/Desktop/CIS*4250/PublicMobileInterface/App/Components/NumericalSlider.js">
+          <metrics statements="7" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+          <line num="9" count="0" type="stmt"/>
+          <line num="10" count="0" type="stmt"/>
+          <line num="16" count="0" type="stmt"/>
+          <line num="22" count="0" type="stmt"/>
+          <line num="26" count="0" type="stmt"/>
+          <line num="32" count="0" type="stmt"/>
+          <line num="48" count="1" type="stmt"/>
+        </file>
         <file name="RoundedButton.js" path="/Users/sjbowman/Desktop/CIS*4250/PublicMobileInterface/App/Components/RoundedButton.js">
           <metrics statements="7" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="2"/>
           <line num="7" count="6" type="stmt"/>
           <line num="8" count="0" type="stmt"/>
           <line num="10" count="0" type="stmt"/>
-          <line num="17" count="12" type="stmt"/>
-          <line num="18" count="12" type="stmt"/>
-          <line num="22" count="12" type="stmt"/>
+          <line num="17" count="13" type="stmt"/>
+          <line num="18" count="13" type="stmt"/>
+          <line num="22" count="13" type="stmt"/>
           <line num="30" count="6" type="stmt"/>
         </file>
       </package>
@@ -61,6 +70,9 @@
         <file name="DropDownStyle.js" path="/Users/sjbowman/Desktop/CIS*4250/PublicMobileInterface/App/Components/Styles/DropDownStyle.js">
           <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         </file>
+        <file name="NumericalSliderStyle.js" path="/Users/sjbowman/Desktop/CIS*4250/PublicMobileInterface/App/Components/Styles/NumericalSliderStyle.js">
+          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        </file>
         <file name="RoundedButtonStyle.js" path="/Users/sjbowman/Desktop/CIS*4250/PublicMobileInterface/App/Components/Styles/RoundedButtonStyle.js">
           <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         </file>
@@ -73,7 +85,7 @@
         </file>
       </package>
       <package name="Containers">
-        <metrics statements="115" coveredstatements="35" conditionals="21" coveredconditionals="1" methods="67" coveredmethods="17"/>
+        <metrics statements="168" coveredstatements="52" conditionals="35" coveredconditionals="6" methods="82" coveredmethods="18"/>
         <file name="AccountInfo.js" path="/Users/sjbowman/Desktop/CIS*4250/PublicMobileInterface/App/Containers/AccountInfo.js">
           <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
           <line num="12" count="1" type="stmt"/>
@@ -111,10 +123,63 @@
           <line num="127" count="1" type="stmt"/>
         </file>
         <file name="CatInfo.js" path="/Users/sjbowman/Desktop/CIS*4250/PublicMobileInterface/App/Containers/CatInfo.js">
-          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
-          <line num="18" count="1" type="stmt"/>
-          <line num="19" count="1" type="stmt"/>
-          <line num="36" count="1" type="stmt"/>
+          <metrics statements="56" coveredstatements="20" conditionals="14" coveredconditionals="5" methods="18" coveredmethods="3"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="20" count="1" type="stmt"/>
+          <line num="21" count="1" type="stmt"/>
+          <line num="38" count="1" type="stmt"/>
+          <line num="40" count="1" type="stmt"/>
+          <line num="42" count="0" type="stmt"/>
+          <line num="43" count="0" type="stmt"/>
+          <line num="53" count="0" type="stmt"/>
+          <line num="55" count="1" type="stmt"/>
+          <line num="57" count="0" type="stmt"/>
+          <line num="58" count="0" type="stmt"/>
+          <line num="61" count="0" type="stmt"/>
+          <line num="63" count="0" type="stmt"/>
+          <line num="65" count="1" type="stmt"/>
+          <line num="67" count="0" type="stmt"/>
+          <line num="68" count="0" type="stmt"/>
+          <line num="71" count="0" type="stmt"/>
+          <line num="73" count="0" type="stmt"/>
+          <line num="77" count="0" type="stmt"/>
+          <line num="78" count="0" type="stmt"/>
+          <line num="79" count="0" type="stmt"/>
+          <line num="85" count="0" type="stmt"/>
+          <line num="91" count="0" type="stmt"/>
+          <line num="92" count="0" type="stmt"/>
+          <line num="93" count="0" type="stmt"/>
+          <line num="100" count="0" type="stmt"/>
+          <line num="106" count="0" type="stmt"/>
+          <line num="107" count="0" type="stmt"/>
+          <line num="108" count="0" type="stmt"/>
+          <line num="115" count="0" type="stmt"/>
+          <line num="121" count="0" type="stmt"/>
+          <line num="122" count="0" type="stmt"/>
+          <line num="123" count="0" type="stmt"/>
+          <line num="147" count="0" type="stmt"/>
+          <line num="161" count="0" type="stmt"/>
+          <line num="162" count="0" type="stmt"/>
+          <line num="166" count="1" type="stmt"/>
+          <line num="167" count="1" type="stmt"/>
+          <line num="169" count="1" type="stmt"/>
+          <line num="170" count="1" type="stmt"/>
+          <line num="171" count="0" type="stmt"/>
+          <line num="172" count="0" type="stmt"/>
+          <line num="177" count="1" type="stmt"/>
+          <line num="178" count="1" type="stmt"/>
+          <line num="179" count="0" type="stmt"/>
+          <line num="180" count="0" type="stmt"/>
+          <line num="188" count="1" type="stmt"/>
+          <line num="189" count="1" type="stmt"/>
+          <line num="195" count="0" type="stmt"/>
+          <line num="201" count="1" type="stmt"/>
+          <line num="202" count="1" type="stmt"/>
+          <line num="208" count="0" type="stmt"/>
+          <line num="214" count="1" type="stmt"/>
+          <line num="215" count="1" type="stmt"/>
+          <line num="221" count="0" type="stmt"/>
+          <line num="226" count="1" type="stmt"/>
         </file>
         <file name="CatList.js" path="/Users/sjbowman/Desktop/CIS*4250/PublicMobileInterface/App/Containers/CatList.js">
           <metrics statements="15" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="6" coveredmethods="3"/>
