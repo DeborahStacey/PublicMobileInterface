@@ -25,7 +25,8 @@ const colors = {
   batteryFull: '#48DC4C',
   batteryMedium: '#EA9530',
   batteryLow: '#E31A1A',
-  black: '#000000'
+  black: '#000000',
+  sharedCatColor: '#7faef9'
 }
 
 export default colors

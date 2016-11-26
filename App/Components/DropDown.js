@@ -20,8 +20,28 @@ export default class DropDown extends React.Component {
     }
   }
 
+  // called when info is being pulled from db
   componentWillReceiveProps (nextProps) {
+    console.log(nextProps)
     var options = nextProps.options.items
+    if (options != null) {
+      var items = []
+
+      items.push(<Picker.Item label='Select a Value...' value={0} key={'first'} />)
+
+      for (var i = 0; i < options.length; i++) {
+        items.push(<Picker.Item label={options[i].name} value={options[i].id} key={i} />)
+      }
+
+      this.setState({
+        items: items
+      })
+    }
+  }
+
+  // called on page load
+  componentWillMount () {
+    var options = this.props.options.items
     if (options != null) {
       var items = []
 

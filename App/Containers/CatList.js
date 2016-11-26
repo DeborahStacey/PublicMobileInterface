@@ -29,9 +29,12 @@ export default class CatList extends React.Component {
     db.get('/pet/pets')
     .then(function (response) {
       var array = response.data
-      that.setState({
-        catsData: array
-      })
+
+      if (array.message !== 'No pets found') {
+        that.setState({
+          catsData: array
+        })
+      }
     })
     .catch((error) => window.alert(error))
   }
@@ -43,10 +46,30 @@ export default class CatList extends React.Component {
   render () {
     var catsData = this.state.catsData
     var catCards = []
+
     if (catsData != null) {
       for (var i = 0; i < catsData.personal.length; i++) {
-        catCards.push(<CatCard basicCatInfo={catsData.personal[i]} onClick={this.cardClicked.bind(this)} key={i} />)
+        catCards.push(<CatCard basicCatInfo={catsData.personal[i]} onClick={this.cardClicked.bind(this)} shared={false} key={i} />)
       }
+      for (var j = 0; j < catsData.shared.length; j++) {
+        catCards.push(<CatCard basicCatInfo={catsData.shared[j]} onClick={this.cardClicked.bind(this)} shared key={'s' + j} />)
+      }
+    } else {
+      return (
+        <View style={styles.mainContainer}>
+          <ScrollView style={styles.container}>
+
+            <View style={styles.messageBox}>
+              <View style={styles.messageBoxContents}>
+
+                <Text style={styles.sectionText}>You don't have any cats yet!</Text>
+
+              </View>
+            </View>
+
+          </ScrollView>
+        </View>
+      )
     }
 
     return (
