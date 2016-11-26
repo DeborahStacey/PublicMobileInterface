@@ -26,7 +26,7 @@ class NavigationRouter extends Component {
         <Scene key='drawer' component={NavigationDrawer} open={false}>
           <Scene key='drawerChildrenWrapper' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} leftButtonIconStyle={Styles.leftButton} rightButtonTextStyle={Styles.rightButton}>
             <Scene initial key='signIn' component={SignIn} title='WellCat' renderLeftButton={() => true} />
-            <Scene key='presentationScreen' component={PresentationScreen} title='WellCat' renderLeftButton={() => false} renderRightButton={NavItems.hamburgerButton} />
+            <Scene key='presentationScreen' component={PresentationScreen} title='WellCat' renderBackButton={() => false} renderRightButton={NavItems.hamburgerButton} />
             <Scene key='signUp' component={SignUp} title='Sign-Up' renderLeftButton={() => true} renderRightButton={NavItems.hamburgerButton} />
             <Scene key='addCat' component={AddCat} title='Add Cat' renderLeftButton={() => true} />
             <Scene key='accountInfo' component={AccountInfo} title='Account Info' renderLeftButton={() => true} renderRightButton={NavItems.hamburgerButton} />
