@@ -57,7 +57,7 @@ exports[`test renders correctly 1`] = `
           "textAlign": "left",
         }
       }>
-              Lob
+      
     </Text>
     <Text
       accessible={true}
@@ -86,7 +86,7 @@ exports[`test renders correctly 1`] = `
           "textAlign": "left",
         }
       }>
-              Riddle
+      
     </Text>
     <Text
       accessible={true}
@@ -101,22 +101,22 @@ exports[`test renders correctly 1`] = `
           "textAlign": "left",
         }
       }>
-      Email
+      Phone
     </Text>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
+    <TextInput
+      onChangeText={[Function]}
+      placeholder="Phone"
+      placeholderTextColor="grey"
       style={
         Object {
           "color": "#2C457F",
-          "fontSize": 18,
+          "fontSize": 14,
+          "fontWeight": "bold",
+          "height": 50,
           "marginVertical": 5,
-          "textAlign": "left",
         }
-      }>
-              LobRiddle@Gmail.com
-    </Text>
+      }
+      value="" />
     <Text
       accessible={true}
       allowFontScaling={true}
@@ -132,20 +132,48 @@ exports[`test renders correctly 1`] = `
       }>
       Address
     </Text>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
+    <TextInput
+      onChangeText={[Function]}
+      placeholder="Street"
+      placeholderTextColor="grey"
       style={
         Object {
           "color": "#2C457F",
-          "fontSize": 18,
+          "fontSize": 14,
+          "fontWeight": "bold",
+          "height": 50,
           "marginVertical": 5,
-          "textAlign": "left",
         }
-      }>
-              45-375 Lottle Dr
-    </Text>
+      }
+      value="" />
+    <TextInput
+      onChangeText={[Function]}
+      placeholder="Unit"
+      placeholderTextColor="grey"
+      style={
+        Object {
+          "color": "#2C457F",
+          "fontSize": 14,
+          "fontWeight": "bold",
+          "height": 50,
+          "marginVertical": 5,
+        }
+      }
+      value="" />
+    <TextInput
+      onChangeText={[Function]}
+      placeholder="City"
+      placeholderTextColor="grey"
+      style={
+        Object {
+          "color": "#2C457F",
+          "fontSize": 14,
+          "fontWeight": "bold",
+          "height": 50,
+          "marginVertical": 5,
+        }
+      }
+      value="" />
     <Text
       accessible={true}
       allowFontScaling={true}
@@ -159,22 +187,22 @@ exports[`test renders correctly 1`] = `
           "textAlign": "left",
         }
       }>
-      Cat Owner?
+      Postal
     </Text>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
+    <TextInput
+      onChangeText={[Function]}
+      placeholder="Postal Code"
+      placeholderTextColor="grey"
       style={
         Object {
           "color": "#2C457F",
-          "fontSize": 18,
+          "fontSize": 14,
+          "fontWeight": "bold",
+          "height": 50,
           "marginVertical": 5,
-          "textAlign": "left",
         }
-      }>
-              Yes
-    </Text>
+      }
+      value="" />
     <View
       accessibilityComponentType={undefined}
       accessibilityLabel={undefined}
@@ -213,91 +241,23 @@ exports[`test renders correctly 1`] = `
             "textAlign": "center",
           }
         }>
-        VIEW CATS
+        UPDATE
       </Text>
     </View>
-    <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
-      accessible={true}
-      hitSlop={undefined}
-      onLayout={undefined}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
+    <TextInput
+      onChangeText={[Function]}
+      placeholder="password"
+      placeholderTextColor="grey"
       style={
         Object {
-          "backgroundColor": "#466ECC",
-          "borderRadius": 5,
-          "height": 45,
-          "justifyContent": "center",
-          "marginHorizontal": 25,
-          "marginVertical": 10,
-          "opacity": 1,
+          "color": "#2C457F",
+          "fontSize": 14,
+          "fontWeight": "bold",
+          "height": 50,
+          "marginVertical": 5,
         }
       }
-      testID={undefined}>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "color": "white",
-            "fontSize": 14,
-            "fontWeight": "bold",
-            "marginVertical": 10,
-            "textAlign": "center",
-          }
-        }>
-        VIEW CAT GROUPS
-      </Text>
-    </View>
-    <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
-      accessible={true}
-      hitSlop={undefined}
-      onLayout={undefined}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "backgroundColor": "#466ECC",
-          "borderRadius": 5,
-          "height": 45,
-          "justifyContent": "center",
-          "marginHorizontal": 25,
-          "marginVertical": 10,
-          "opacity": 1,
-        }
-      }
-      testID={undefined}>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "color": "white",
-            "fontSize": 14,
-            "fontWeight": "bold",
-            "marginVertical": 10,
-            "textAlign": "center",
-          }
-        }>
-        EDIT
-      </Text>
-    </View>
+      value="" />
   </ScrollView>
 </View>
 `;
