@@ -37,7 +37,7 @@ export default class CatInfo extends React.Component {
   componentWillMount () {
     var that = this
 
-    db.get('/pet/view/' + this.props.data)
+    db.get('/pet/view/' + this.props.catId)
     .then(function (response) {
       var petData = response.data.pet
       that.setState({
@@ -58,7 +58,6 @@ export default class CatInfo extends React.Component {
       that.setState({
         breeds: breedsData
       })
-      console.log(breedsData)
     })
     .catch((error) => window.alert(error))
 
@@ -68,7 +67,6 @@ export default class CatInfo extends React.Component {
       that.setState({
         genders: gendersData
       })
-      console.log(gendersData[1])
     })
     .catch((error) => window.alert(error))
   }
@@ -82,9 +80,11 @@ export default class CatInfo extends React.Component {
   }
 
   weightClick () {
-    this.setState({
-      weightState: 1
-    })
+    if (this.props.access === 'write') {
+      this.setState({
+        weightState: 1
+      })
+    }
   }
 
   updateWeight (newWeight) {
@@ -97,9 +97,11 @@ export default class CatInfo extends React.Component {
   }
 
   heightClick () {
-    this.setState({
-      heightState: 1
-    })
+    if (this.props.access === 'write') {
+      this.setState({
+        heightState: 1
+      })
+    }
   }
 
   updateHeight (newHeight) {
@@ -112,9 +114,11 @@ export default class CatInfo extends React.Component {
   }
 
   lengthClick () {
-    this.setState({
-      lengthState: 1
-    })
+    if (this.props.access === 'write') {
+      this.setState({
+        lengthState: 1
+      })
+    }
   }
 
   updateLength (newLength) {
@@ -128,7 +132,7 @@ export default class CatInfo extends React.Component {
 
   updateCat () {
     var postObj = {
-      'petID': this.props.data,
+      'petID': this.props.catId,
       'name': this.state.name,
       'breed': this.state.breed,
       'gender': this.state.gender,
@@ -137,8 +141,9 @@ export default class CatInfo extends React.Component {
       'height': this.state.height,
       'length': this.state.length
     }
+
     db.put('/pet/update', postObj)
-    .then((response) => window.alert(JSON.stringify(response.data)))
+    .then((response) => console.log(response.data))
   }
 
   shareClick () {
@@ -210,6 +215,17 @@ export default class CatInfo extends React.Component {
       )
     }
 
+    var shareButton = false
+    var editableText = false
+    if (this.props.access === 'write') {
+      editableText = true
+      shareButton = (
+        <RoundedButton onPress={this.shareClick.bind(this)}>
+          Share Cat
+        </RoundedButton>
+      )
+    }
+
     return (
       <View style={styles.mainContainer}>
         <ScrollView style={styles.container}>
@@ -222,7 +238,7 @@ export default class CatInfo extends React.Component {
               </View>
 
               <Text style={styles.infoTitleText}>Name</Text>
-              <TextInput onBlur={this.updateCat.bind(this)} onChangeText={this.updateName.bind(this)} value={this.state.name} placeholderTextColor='white' style={styles.sectionInput} />
+              <TextInput onBlur={this.updateCat.bind(this)} onChangeText={this.updateName.bind(this)} value={this.state.name} placeholderTextColor='white' style={styles.sectionInput} editable={editableText} />
 
               <Text style={styles.infoTitleText}>Breed</Text>
               <Text style={styles.infoText}>{curBreed}</Text>
@@ -246,9 +262,7 @@ export default class CatInfo extends React.Component {
             View Owner
           </RoundedButton>
 
-          <RoundedButton onPress={this.shareClick.bind(this)}>
-            Share Cat
-          </RoundedButton>
+          {shareButton}
 
         </ScrollView>
       </View>

@@ -10,22 +10,38 @@ export default class CatCard extends React.Component {
       name: '',
       ownerName: '',
       gender: '',
-      petId: ''
+      petId: '',
+      access: 'write'
     }
   }
 
   componentDidMount () {
     var catInfo = this.props.basicCatInfo
-    this.setState({
-      name: catInfo.name,
-      ownerName: catInfo.firstname + ' ' + catInfo.lastname,
-      gender: catInfo.gender,
-      petId: catInfo.petid
-    })
+    if (this.props.shared) {
+      console.log(catInfo.access)
+      this.setState({
+        name: catInfo.name,
+        ownerName: catInfo.firstname + ' ' + catInfo.lastname,
+        gender: catInfo.gender,
+        petId: catInfo.petid,
+        access: catInfo.access
+      })
+    } else {
+      this.setState({
+        name: catInfo.name,
+        ownerName: catInfo.firstname + ' ' + catInfo.lastname,
+        gender: catInfo.gender,
+        petId: catInfo.petid
+      })
+    }
   }
 
   cardClick () {
-    this.props.onClick(this.state.petId)
+    var propsObj = {
+      'catId': this.state.petId,
+      'access': this.state.access
+    }
+    this.props.onClick(propsObj)
   }
 
   render () {
