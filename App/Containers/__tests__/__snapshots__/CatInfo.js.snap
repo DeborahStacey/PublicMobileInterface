@@ -50,6 +50,7 @@ exports[`test renders correctly 1`] = `
           Name
         </Text>
         <TextInput
+          editable={false}
           onBlur={[Function]}
           onChangeText={[Function]}
           placeholderTextColor="white"
@@ -312,47 +313,6 @@ exports[`test renders correctly 1`] = `
           }
         }>
         VIEW OWNER
-      </Text>
-    </View>
-    <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
-      accessible={true}
-      hitSlop={undefined}
-      onLayout={undefined}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "backgroundColor": "#466ECC",
-          "borderRadius": 5,
-          "height": 45,
-          "justifyContent": "center",
-          "marginHorizontal": 25,
-          "marginVertical": 10,
-          "opacity": 1,
-        }
-      }
-      testID={undefined}>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "color": "white",
-            "fontSize": 14,
-            "fontWeight": "bold",
-            "marginVertical": 10,
-            "textAlign": "center",
-          }
-        }>
-        SHARE CAT
       </Text>
     </View>
   </ScrollView>

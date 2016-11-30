@@ -4,7 +4,8 @@ const images = {
   ignite: require('../Images/ignite_logo.png'),
   tileBg: require('../Images/tile_bg.png'),
   datCat: require('../Images/datCat.png'),
-  accountInfoLogo: require('../Images/PogChamp.png')
+  accountInfoLogo: require('../Images/PogChamp.png'),
+  wellCatLogo: require('../Images/WellCatLogo.png')
 }
 
 export default images
