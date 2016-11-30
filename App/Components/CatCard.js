@@ -18,7 +18,6 @@ export default class CatCard extends React.Component {
   componentDidMount () {
     var catInfo = this.props.basicCatInfo
     if (this.props.shared) {
-      console.log(catInfo.access)
       this.setState({
         name: catInfo.name,
         ownerName: catInfo.firstname + ' ' + catInfo.lastname,
