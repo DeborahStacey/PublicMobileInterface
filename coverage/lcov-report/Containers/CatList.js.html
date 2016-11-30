@@ -20,14 +20,14 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">60% </span>
+        <span class="strong">47.37% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>9/15</span>
+        <span class='fraction'>9/19</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">25% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>1/2</span>
+        <span class='fraction'>1/4</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">50% </span>
@@ -35,13 +35,13 @@
         <span class='fraction'>3/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">60% </span>
+        <span class="strong">47.37% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>9/15</span>
+        <span class='fraction'>9/19</span>
       </div>
     </div>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line low'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -112,7 +112,30 @@
 67
 68
 69
-70</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -143,7 +166,10 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -157,13 +183,33 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -212,9 +258,12 @@ export default class CatList extends React.Component {
     db.get('/pet/pets')
     .then(<span class="fstat-no" title="function not covered" >fu</span>nction (response) {
       var array = <span class="cstat-no" title="statement not covered" >response.data</span>
-<span class="cstat-no" title="statement not covered" >      that.setState({</span>
-        catsData: array
-      })
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (array.message !== 'No pets found') {</span>
+<span class="cstat-no" title="statement not covered" >        that.setState({</span>
+          catsData: array
+        })
+      }
     })
     .catch(<span class="fstat-no" title="function not covered" >(e</span>rror) =&gt; <span class="cstat-no" title="statement not covered" >window.alert(error))</span>
   }
@@ -226,13 +275,33 @@ export default class CatList extends React.Component {
   render () {
     var catsData = this.state.catsData
     var catCards = []
+&nbsp;
     <span class="missing-if-branch" title="if path not taken" >I</span>if (catsData != null) {
 <span class="cstat-no" title="statement not covered" >      for (var i = 0; i &lt; catsData.personal.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >        catCards.push(&lt;CatCard basicCatInfo={catsData.personal[i]} onClick={this.cardClicked.bind(this)} key={i} /&gt;)</span>
+<span class="cstat-no" title="statement not covered" >        catCards.push(&lt;CatCard basicCatInfo={catsData.personal[i]} onClick={this.cardClicked.bind(this)} shared={false} key={i} /&gt;)</span>
       }
+<span class="cstat-no" title="statement not covered" >      for (var j = 0; j &lt; catsData.shared.length; j++) {</span>
+<span class="cstat-no" title="statement not covered" >        catCards.push(&lt;CatCard basicCatInfo={catsData.shared[j]} onClick={this.cardClicked.bind(this)} shared key={'s' + j} /&gt;)</span>
+      }
+    } else {
+      return (
+        &lt;View style={styles.mainContainer}&gt;
+          &lt;ScrollView style={styles.container}&gt;
+&nbsp;
+            &lt;View style={styles.messageBox}&gt;
+              &lt;View style={styles.messageBoxContents}&gt;
+&nbsp;
+                &lt;Text style={styles.sectionText}&gt;You don't have any cats yet!&lt;/Text&gt;
+&nbsp;
+              &lt;/View&gt;
+            &lt;/View&gt;
+&nbsp;
+          &lt;/ScrollView&gt;
+        &lt;/View&gt;
+      )
     }
 &nbsp;
-    return (
+<span class="cstat-no" title="statement not covered" >    return (</span>
       &lt;View style={styles.mainContainer}&gt;
         &lt;ScrollView style={styles.container}&gt;
 &nbsp;
@@ -256,7 +325,7 @@ export default class CatList extends React.Component {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Nov 25 2016 18:53:33 GMT-0500 (EST)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Nov 29 2016 10:03:18 GMT-0500 (EST)
 </div>
 </div>
 <script src="../prettify.js"></script>

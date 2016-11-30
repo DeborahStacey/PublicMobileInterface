@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">35.71% </span>
+        <span class="strong">34.48% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>20/56</span>
+        <span class='fraction'>20/58</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">35.71% </span>
@@ -30,14 +30,14 @@
         <span class='fraction'>5/14</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">16.67% </span>
+        <span class="strong">15.79% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>3/18</span>
+        <span class='fraction'>3/19</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">35.71% </span>
+        <span class="strong">34.48% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>20/56</span>
+        <span class='fraction'>20/58</span>
       </div>
     </div>
   </div>
@@ -304,16 +304,7 @@
 259
 260
 261
-262
-263
-264
-265
-266
-267
-268
-269
-270
-271</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+262</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -442,23 +433,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -474,6 +448,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -712,23 +694,6 @@ export default class CatInfo extends React.Component {
   }
 &nbsp;
 <span class="fstat-no" title="function not covered" >  up</span>dateCat () {
-    // console.log('Updated Cat Info')
-//     Body:
-// {
-//     "petID": 1,
-//     "name": "Fluffy",
-//     "animalTypeID": 1,
-//     "breed": 1,
-//     "gender": 1,
-//     "dateOfBirth": "2016-10-23",
-//     "weight": 15.2,
-//     "height": 5.12,
-//     "length": 13.56,
-//     "declawed": "true",
-//     "outdoor": "false",
-//     "fixed": "true"
-// }
-&nbsp;
     var postObj = <span class="cstat-no" title="statement not covered" >{</span>
       'petID': this.props.data,
       'name': this.state.name,
@@ -745,6 +710,14 @@ export default class CatInfo extends React.Component {
     }
 <span class="cstat-no" title="statement not covered" >    db.put('/pet/update', postObj)</span>
     .then(<span class="fstat-no" title="function not covered" >(r</span>esponse) =&gt; <span class="cstat-no" title="statement not covered" >window.alert(JSON.stringify(response.data)))</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  sh</span>areClick () {
+    var shareInfo = <span class="cstat-no" title="statement not covered" >{</span>
+      'name': this.state.name,
+      'id': this.props.data
+    }
+<span class="cstat-no" title="statement not covered" >    NavigationActions.shareCat(shareInfo)</span>
   }
 &nbsp;
   render () {
@@ -844,7 +817,7 @@ export default class CatInfo extends React.Component {
             View Owner
           &lt;/RoundedButton&gt;
 &nbsp;
-          &lt;RoundedButton onPress={NavigationActions.shareCat}&gt;
+          &lt;RoundedButton onPress={this.shareClick.bind(this)}&gt;
             Share Cat
           &lt;/RoundedButton&gt;
 &nbsp;
@@ -859,7 +832,7 @@ export default class CatInfo extends React.Component {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Nov 25 2016 18:53:33 GMT-0500 (EST)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Nov 29 2016 10:03:18 GMT-0500 (EST)
 </div>
 </div>
 <script src="../prettify.js"></script>
