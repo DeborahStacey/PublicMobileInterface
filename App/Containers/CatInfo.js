@@ -149,7 +149,7 @@ export default class CatInfo extends React.Component {
   shareClick () {
     var shareInfo = {
       'name': this.state.name,
-      'id': this.props.data
+      'id': this.props.catId
     }
     NavigationActions.shareCat(shareInfo)
   }
