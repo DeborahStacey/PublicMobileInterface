@@ -135,7 +135,7 @@ export default class CatInfo extends React.Component {
       'dateOfBirth': this.state.dob,
       'weight': this.state.weight,
       'height': this.state.height,
-      'length': this.state.length,
+      'length': this.state.length
     }
     db.put('/pet/update', postObj)
     .then((response) => window.alert(JSON.stringify(response.data)))
