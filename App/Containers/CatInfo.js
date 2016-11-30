@@ -130,16 +130,12 @@ export default class CatInfo extends React.Component {
     var postObj = {
       'petID': this.props.data,
       'name': this.state.name,
-      'animalTypeID': '1',
       'breed': this.state.breed,
       'gender': this.state.gender,
       'dateOfBirth': this.state.dob,
       'weight': this.state.weight,
       'height': this.state.height,
       'length': this.state.length,
-      'declawed': 'false',
-      'outdoor': 'false',
-      'fixed': 'false'
     }
     db.put('/pet/update', postObj)
     .then((response) => window.alert(JSON.stringify(response.data)))
