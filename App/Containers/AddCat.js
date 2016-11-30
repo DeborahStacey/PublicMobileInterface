@@ -1,9 +1,9 @@
 import React from 'react'
-import { ScrollView, Text, View, TextInput } from 'react-native'
+import { ScrollView, Text, View, TextInput, Alert } from 'react-native'
 import RoundedButton from '../Components/RoundedButton'
 import DropDown from '../Components/DropDown'
 import { Colors } from '../Themes'
-// import { Actions as NavigationActions } from 'react-native-router-flux'
+import { Actions as NavigationActions } from 'react-native-router-flux'
 import {create} from 'apisauce'
 
 // Styles
@@ -65,20 +65,42 @@ export default class AddCat extends React.Component {
   registerCat () {
     var postObj = {
       'name': this.state.name,
-      'animalTypeID': '1',
-      'breed': this.state.breed,
-      'gender': this.state.gender,
+      'animalTypeID': 1,
+      'breed': parseInt(this.state.breed),
+      'gender': parseInt(this.state.gender),
       'dateOfBirth': this.state.dob,
-      'weight': this.state.weight,
-      'height': this.state.height,
-      'length': this.state.length,
+      'weight': parseFloat(this.state.weight),
+      'height': parseFloat(this.state.height),
+      'length': parseFloat(this.state.length),
       'declawed': 'false',
       'outdoor': 'false',
       'fixed': 'false'
     }
 
+    var alertSuccess = this.state.name + ' has been added to your cats!'
+    var alertFailure = this.state.name + ' was not created. Please check the info and try again.'
+
     db.post('/pet/create', postObj)
-    .then((response) => window.alert(JSON.stringify(response.data)))
+    .then(function (response) {
+      if (response.data.success) {
+        Alert.alert(
+          'Success',
+          alertSuccess,
+          [
+            {text: 'OK'}
+          ]
+        )
+        NavigationActions.pop()
+      } else {
+        Alert.alert(
+          'Failure',
+          alertFailure,
+          [
+            {text: 'OK'}
+          ]
+        )
+      }
+    })
   }
 
   updateName (event) {
