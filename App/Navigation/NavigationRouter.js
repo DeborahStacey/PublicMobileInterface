@@ -11,6 +11,7 @@ import SignUp from '../Containers/SignUp'
 import SignIn from '../Containers/SignIn'
 import AddCat from '../Containers/AddCat'
 import AccountInfo from '../Containers/AccountInfo'
+import UpdateAccountInfo from '../Containers/UpdateAccountInfo'
 import CatInfo from '../Containers/CatInfo'
 import CatList from '../Containers/CatList'
 import ShareCat from '../Containers/ShareCat'
@@ -30,6 +31,7 @@ class NavigationRouter extends Component {
             <Scene key='signUp' component={SignUp} title='Sign-Up' renderLeftButton={() => true} renderRightButton={NavItems.hamburgerButton} />
             <Scene key='addCat' component={AddCat} title='Add Cat' renderLeftButton={() => true} />
             <Scene key='accountInfo' component={AccountInfo} title='Account Info' renderLeftButton={() => true} renderRightButton={NavItems.hamburgerButton} />
+            <Scene key='updateAccountInfo' component={UpdateAccountInfo} title='Update Account Info' renderLeftButton={() => true} renderRightButton={NavItems.hamburgerButton} />
             <Scene key='catInfo' component={CatInfo} title='Cat Info' renderLeftButton={() => true} renderRightButton={NavItems.hamburgerButton} />
             <Scene key='catList' component={CatList} title='Cat List' renderLeftButton={() => true} renderRightButton={NavItems.hamburgerButton} />
             <Scene key='shareCat' component={ShareCat} title='Share Cat' renderLeftButton={() => true} renderRightButton={NavItems.hamburgerButton} />
