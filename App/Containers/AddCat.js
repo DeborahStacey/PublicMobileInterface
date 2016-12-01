@@ -158,7 +158,7 @@ export default class AddCat extends React.Component {
             <View style={styles.messageBoxContents}>
 
               <Text style={styles.sectionText}>Name</Text>
-              <TextInput onChangeText={this.updateName.bind(this)} returnKeyType='next'  placeholder='Enter your cat&apos;s name' placeholderTextColor={Colors.placeholderText} style={styles.sectionInput} />
+              <TextInput onChangeText={this.updateName.bind(this)} returnKeyType='next' placeholder='Enter your cat&apos;s name' placeholderTextColor={Colors.placeholderText} style={styles.sectionInput} />
 
               <Text style={styles.sectionText}>Breed</Text>
               <DropDown options={this.state.breeds} onValueChange={this.updateBreed.bind(this)} selectedValue={this.state.breed} />
@@ -167,13 +167,13 @@ export default class AddCat extends React.Component {
               <DropDown options={this.state.genders} onValueChange={this.updateGender.bind(this)} selectedValue={this.state.gender} />
 
               <Text style={styles.sectionText}>Weight(lbs)</Text>
-              <TextInput ref='1' keyboardType="numeric" onSubmitEditing={() => this.focusNextField('2')} returnKeyType='next' onChangeText={this.updateWeight.bind(this)} placeholder='Enter your cat&apos;s weight (lbs)' placeholderTextColor={Colors.placeholderText} style={styles.sectionInput} />
+              <TextInput ref='1' keyboardType='numeric' onSubmitEditing={() => this.focusNextField('2')} returnKeyType='next' onChangeText={this.updateWeight.bind(this)} placeholder='Enter your cat&apos;s weight (lbs)' placeholderTextColor={Colors.placeholderText} style={styles.sectionInput} />
 
               <Text style={styles.sectionText}>Height(cm)</Text>
-              <TextInput ref='2' keyboardType="numeric" onSubmitEditing={() => this.focusNextField('3')} returnKeyType='next' onChangeText={this.updateHeight.bind(this)} placeholder='Enter your cat&apos;s height (cm)' placeholderTextColor={Colors.placeholderText} style={styles.sectionInput} />
+              <TextInput ref='2' keyboardType='numeric' onSubmitEditing={() => this.focusNextField('3')} returnKeyType='next' onChangeText={this.updateHeight.bind(this)} placeholder='Enter your cat&apos;s height (cm)' placeholderTextColor={Colors.placeholderText} style={styles.sectionInput} />
 
               <Text style={styles.sectionText}>Length(cm)</Text>
-              <TextInput ref='3' keyboardType="numeric" onSubmitEditing={this.registerCat.bind(this)} returnKeyType='done' onChangeText={this.updateLength.bind(this)} placeholder='Enter your cat&apos;s length (cm)' placeholderTextColor={Colors.placeholderText} style={styles.sectionInput} />
+              <TextInput ref='3' keyboardType='numeric' onSubmitEditing={this.registerCat.bind(this)} returnKeyType='done' onChangeText={this.updateLength.bind(this)} placeholder='Enter your cat&apos;s length (cm)' placeholderTextColor={Colors.placeholderText} style={styles.sectionInput} />
 
             </View>
           </View>

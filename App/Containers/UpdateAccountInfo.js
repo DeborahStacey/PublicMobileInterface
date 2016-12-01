@@ -102,10 +102,14 @@ export default class UpdateAccountInfo extends React.Component {
 
     db.put('/user/update', postObj)
       .then(function (response) {
-        if (response.data.success === false){window.alert('Incorrect or Blank Password!')}
-        else{NavigationActions.accountInfo()
-          window.alert('Account Updated')}
-      })
+        if (response.data.success === false) {
+          window.alert('Incorrect or blank password!')
+        } else {
+          NavigationActions.accountInfo()
+          window.alert('Account updated.')
+        }
+      }
+    )
   }
 
   render () {
@@ -127,7 +131,7 @@ export default class UpdateAccountInfo extends React.Component {
           <RoundedButton onPress={() => this.updateAccount(this.state.password)}>
             Update
           </RoundedButton>
-          <TextInput onChangeText={this.updatePassword.bind(this)} value={this.state.password} placeholder='password' placeholderTextColor='grey' style={[styles.sectionInput, {textAlign: 'center'}]} />
+          <TextInput onChangeText={this.updatePassword.bind(this)} value={this.state.password} placeholder='password' placeholderTextColor='grey' style={[styles.sectionInput, {textAlign: 'center'}]} secureTextEntry />
         </ScrollView>
       </View>
     )

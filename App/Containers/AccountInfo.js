@@ -1,5 +1,5 @@
 import React from 'react'
-import { ScrollView, Text, Image, View, TextInput } from 'react-native'
+import { ScrollView, Text, Image, View } from 'react-native'
 import { Images } from '../Themes'
 import RoundedButton from '../Components/RoundedButton'
 import {create} from 'apisauce'
@@ -114,7 +114,7 @@ export default class AccountInfo extends React.Component {
           <Text style={styles.infoTitleText}>First Name</Text>
           <Text style={styles.infoText}>{this.state.fname}</Text>
           <Text style={styles.infoTitleText}>Last Name</Text>
-          <Text style={styles.infoText}>{this.state.lname}</Text> 
+          <Text style={styles.infoText}>{this.state.lname}</Text>
           <Text style={styles.infoTitleText}>Phone</Text>
           <Text style={styles.infoText}>{this.state.pnumber}</Text>
           <Text style={styles.infoTitleText}>Address</Text>
