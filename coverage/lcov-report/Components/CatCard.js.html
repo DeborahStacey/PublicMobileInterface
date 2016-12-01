@@ -20,14 +20,14 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">10% </span>
+        <span class="strong">7.14% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>1/10</span>
+        <span class='fraction'>1/14</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/2</span>
+        <span class='fraction'>0/4</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>0/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">10% </span>
+        <span class="strong">7.14% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>1/10</span>
+        <span class='fraction'>1/14</span>
       </div>
     </div>
   </div>
@@ -102,7 +102,23 @@
 57
 58
 59
-60</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -119,6 +135,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -126,6 +145,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -173,22 +205,38 @@ export default class CatCard extends React.Component {
       name: '',
       ownerName: '',
       gender: '',
-      petId: ''
+      petId: '',
+      access: 'write'
     }
   }
 &nbsp;
 <span class="fstat-no" title="function not covered" >  co</span>mponentDidMount () {
     var catInfo = <span class="cstat-no" title="statement not covered" >this.props.basicCatInfo</span>
-<span class="cstat-no" title="statement not covered" >    this.setState({</span>
-      name: catInfo.name,
-      ownerName: catInfo.firstname + ' ' + catInfo.lastname,
-      gender: catInfo.gender,
-      petId: catInfo.petid
-    })
+<span class="cstat-no" title="statement not covered" >    if (this.props.shared) {</span>
+<span class="cstat-no" title="statement not covered" >      console.log(catInfo.access)</span>
+<span class="cstat-no" title="statement not covered" >      this.setState({</span>
+        name: catInfo.name,
+        ownerName: catInfo.firstname + ' ' + catInfo.lastname,
+        gender: catInfo.gender,
+        petId: catInfo.petid,
+        access: catInfo.access
+      })
+    } else {
+<span class="cstat-no" title="statement not covered" >      this.setState({</span>
+        name: catInfo.name,
+        ownerName: catInfo.firstname + ' ' + catInfo.lastname,
+        gender: catInfo.gender,
+        petId: catInfo.petid
+      })
+    }
   }
 &nbsp;
 <span class="fstat-no" title="function not covered" >  ca</span>rdClick () {
-<span class="cstat-no" title="statement not covered" >    this.props.onClick(this.state.petId)</span>
+    var propsObj = <span class="cstat-no" title="statement not covered" >{</span>
+      'catId': this.state.petId,
+      'access': this.state.access
+    }
+<span class="cstat-no" title="statement not covered" >    this.props.onClick(propsObj)</span>
   }
 &nbsp;
 <span class="fstat-no" title="function not covered" >  re</span>nder () {
@@ -226,7 +274,7 @@ CatCard.propTypes = {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Nov 29 2016 10:03:18 GMT-0500 (EST)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Nov 30 2016 20:16:46 GMT-0500 (EST)
 </div>
 </div>
 <script src="../prettify.js"></script>

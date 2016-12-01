@@ -6,6 +6,15 @@ exports[`test renders correctly 1`] = `
       "padding": 20,
     }
   }>
+  <Image
+    source={1}
+    style={
+      Object {
+        "alignSelf": "center",
+        "height": 125,
+        "width": 125,
+      }
+    } />
   <View
     accessibilityComponentType={undefined}
     accessibilityLabel={undefined}

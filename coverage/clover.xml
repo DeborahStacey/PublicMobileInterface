@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1480431798613" clover="3.2.0">
-  <project timestamp="1480431798613" name="All files">
-    <metrics statements="252" coveredstatements="85" conditionals="55" coveredconditionals="14" methods="116" coveredmethods="26" elements="423" coveredelements="125" complexity="0" loc="252" ncloc="252" packages="7" files="28" classes="28">
+<coverage generated="1480555006718" clover="3.2.0">
+  <project timestamp="1480555006718" name="All files">
+    <metrics statements="262" coveredstatements="88" conditionals="65" coveredconditionals="15" methods="116" coveredmethods="26" elements="443" coveredelements="129" complexity="0" loc="262" ncloc="262" packages="7" files="28" classes="28">
       <package name="Components">
-        <metrics statements="50" coveredstatements="17" conditionals="10" coveredconditionals="4" methods="20" coveredmethods="6"/>
+        <metrics statements="54" coveredstatements="17" conditionals="12" coveredconditionals="4" methods="20" coveredmethods="6"/>
         <file name="CatCard.js" path="/Users/sjbowman/Desktop/CIS*4250/PublicMobileInterface/App/Components/CatCard.js">
-          <metrics statements="10" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
+          <metrics statements="14" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="0"/>
           <line num="8" count="0" type="stmt"/>
           <line num="9" count="0" type="stmt"/>
-          <line num="18" count="0" type="stmt"/>
           <line num="19" count="0" type="stmt"/>
-          <line num="28" count="0" type="stmt"/>
-          <line num="32" count="0" type="stmt"/>
-          <line num="33" count="0" type="stmt"/>
-          <line num="34" count="0" type="stmt"/>
-          <line num="36" count="0" type="stmt"/>
-          <line num="55" count="1" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="21" count="0" type="stmt"/>
+          <line num="22" count="0" type="stmt"/>
+          <line num="30" count="0" type="stmt"/>
+          <line num="40" count="0" type="stmt"/>
+          <line num="44" count="0" type="stmt"/>
+          <line num="48" count="0" type="stmt"/>
+          <line num="49" count="0" type="stmt"/>
+          <line num="50" count="0" type="stmt"/>
+          <line num="52" count="0" type="stmt"/>
+          <line num="71" count="1" type="stmt"/>
         </file>
         <file name="DrawerButton.js" path="/Users/sjbowman/Desktop/CIS*4250/PublicMobileInterface/App/Components/DrawerButton.js">
           <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
@@ -64,9 +68,9 @@
           <line num="7" count="6" type="stmt"/>
           <line num="8" count="0" type="stmt"/>
           <line num="10" count="0" type="stmt"/>
-          <line num="17" count="10" type="stmt"/>
-          <line num="18" count="10" type="stmt"/>
-          <line num="22" count="10" type="stmt"/>
+          <line num="17" count="9" type="stmt"/>
+          <line num="18" count="9" type="stmt"/>
+          <line num="22" count="9" type="stmt"/>
           <line num="30" count="6" type="stmt"/>
         </file>
       </package>
@@ -96,7 +100,7 @@
         </file>
       </package>
       <package name="Containers">
-        <metrics statements="188" coveredstatements="55" conditionals="37" coveredconditionals="6" methods="93" coveredmethods="19"/>
+        <metrics statements="194" coveredstatements="58" conditionals="45" coveredconditionals="7" methods="93" coveredmethods="19"/>
         <file name="AccountInfo.js" path="/Users/sjbowman/Desktop/CIS*4250/PublicMobileInterface/App/Containers/AccountInfo.js">
           <metrics statements="19" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="14" coveredmethods="3"/>
           <line num="10" count="1" type="stmt"/>
@@ -148,7 +152,7 @@
           <line num="127" count="1" type="stmt"/>
         </file>
         <file name="CatInfo.js" path="/Users/sjbowman/Desktop/CIS*4250/PublicMobileInterface/App/Containers/CatInfo.js">
-          <metrics statements="58" coveredstatements="20" conditionals="14" coveredconditionals="5" methods="19" coveredmethods="3"/>
+          <metrics statements="64" coveredstatements="23" conditionals="22" coveredconditionals="6" methods="19" coveredmethods="3"/>
           <line num="12" count="1" type="stmt"/>
           <line num="20" count="1" type="stmt"/>
           <line num="21" count="1" type="stmt"/>
@@ -160,53 +164,59 @@
           <line num="55" count="1" type="stmt"/>
           <line num="57" count="0" type="stmt"/>
           <line num="58" count="0" type="stmt"/>
-          <line num="61" count="0" type="stmt"/>
-          <line num="63" count="0" type="stmt"/>
-          <line num="65" count="1" type="stmt"/>
+          <line num="62" count="0" type="stmt"/>
+          <line num="64" count="1" type="stmt"/>
+          <line num="66" count="0" type="stmt"/>
           <line num="67" count="0" type="stmt"/>
-          <line num="68" count="0" type="stmt"/>
           <line num="71" count="0" type="stmt"/>
-          <line num="73" count="0" type="stmt"/>
+          <line num="75" count="0" type="stmt"/>
+          <line num="76" count="0" type="stmt"/>
           <line num="77" count="0" type="stmt"/>
-          <line num="78" count="0" type="stmt"/>
-          <line num="79" count="0" type="stmt"/>
-          <line num="85" count="0" type="stmt"/>
+          <line num="83" count="0" type="stmt"/>
+          <line num="84" count="0" type="stmt"/>
           <line num="91" count="0" type="stmt"/>
           <line num="92" count="0" type="stmt"/>
           <line num="93" count="0" type="stmt"/>
           <line num="100" count="0" type="stmt"/>
-          <line num="106" count="0" type="stmt"/>
-          <line num="107" count="0" type="stmt"/>
+          <line num="101" count="0" type="stmt"/>
           <line num="108" count="0" type="stmt"/>
-          <line num="115" count="0" type="stmt"/>
-          <line num="121" count="0" type="stmt"/>
-          <line num="122" count="0" type="stmt"/>
-          <line num="123" count="0" type="stmt"/>
-          <line num="130" count="0" type="stmt"/>
-          <line num="144" count="0" type="stmt"/>
+          <line num="109" count="0" type="stmt"/>
+          <line num="110" count="0" type="stmt"/>
+          <line num="117" count="0" type="stmt"/>
+          <line num="118" count="0" type="stmt"/>
+          <line num="125" count="0" type="stmt"/>
+          <line num="126" count="0" type="stmt"/>
+          <line num="127" count="0" type="stmt"/>
+          <line num="134" count="0" type="stmt"/>
           <line num="145" count="0" type="stmt"/>
-          <line num="149" count="0" type="stmt"/>
-          <line num="153" count="0" type="stmt"/>
-          <line num="157" count="1" type="stmt"/>
+          <line num="146" count="0" type="stmt"/>
+          <line num="150" count="0" type="stmt"/>
+          <line num="154" count="0" type="stmt"/>
           <line num="158" count="1" type="stmt"/>
-          <line num="160" count="1" type="stmt"/>
+          <line num="159" count="1" type="stmt"/>
           <line num="161" count="1" type="stmt"/>
-          <line num="162" count="0" type="stmt"/>
+          <line num="162" count="1" type="stmt"/>
           <line num="163" count="0" type="stmt"/>
-          <line num="168" count="1" type="stmt"/>
+          <line num="164" count="0" type="stmt"/>
           <line num="169" count="1" type="stmt"/>
-          <line num="170" count="0" type="stmt"/>
+          <line num="170" count="1" type="stmt"/>
           <line num="171" count="0" type="stmt"/>
-          <line num="179" count="1" type="stmt"/>
+          <line num="172" count="0" type="stmt"/>
           <line num="180" count="1" type="stmt"/>
-          <line num="186" count="0" type="stmt"/>
-          <line num="192" count="1" type="stmt"/>
+          <line num="181" count="1" type="stmt"/>
+          <line num="187" count="0" type="stmt"/>
           <line num="193" count="1" type="stmt"/>
-          <line num="199" count="0" type="stmt"/>
-          <line num="205" count="1" type="stmt"/>
+          <line num="194" count="1" type="stmt"/>
+          <line num="200" count="0" type="stmt"/>
           <line num="206" count="1" type="stmt"/>
-          <line num="212" count="0" type="stmt"/>
-          <line num="217" count="1" type="stmt"/>
+          <line num="207" count="1" type="stmt"/>
+          <line num="213" count="0" type="stmt"/>
+          <line num="218" count="1" type="stmt"/>
+          <line num="219" count="1" type="stmt"/>
+          <line num="220" count="1" type="stmt"/>
+          <line num="221" count="0" type="stmt"/>
+          <line num="222" count="0" type="stmt"/>
+          <line num="229" count="1" type="stmt"/>
         </file>
         <file name="CatList.js" path="/Users/sjbowman/Desktop/CIS*4250/PublicMobileInterface/App/Containers/CatList.js">
           <metrics statements="19" coveredstatements="9" conditionals="4" coveredconditionals="1" methods="6" coveredmethods="3"/>
@@ -232,32 +242,32 @@
         </file>
         <file name="DrawerContent.js" path="/Users/sjbowman/Desktop/CIS*4250/PublicMobileInterface/App/Containers/DrawerContent.js">
           <metrics statements="26" coveredstatements="4" conditionals="4" coveredconditionals="0" methods="12" coveredmethods="2"/>
-          <line num="8" count="1" type="stmt"/>
-          <line num="16" count="1" type="stmt"/>
-          <line num="17" count="0" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
           <line num="18" count="0" type="stmt"/>
           <line num="19" count="0" type="stmt"/>
-          <line num="21" count="0" type="stmt"/>
-          <line num="26" count="0" type="stmt"/>
-          <line num="30" count="0" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="22" count="0" type="stmt"/>
+          <line num="27" count="0" type="stmt"/>
           <line num="31" count="0" type="stmt"/>
-          <line num="35" count="0" type="stmt"/>
+          <line num="32" count="0" type="stmt"/>
           <line num="36" count="0" type="stmt"/>
-          <line num="40" count="0" type="stmt"/>
+          <line num="37" count="0" type="stmt"/>
           <line num="41" count="0" type="stmt"/>
-          <line num="45" count="0" type="stmt"/>
+          <line num="42" count="0" type="stmt"/>
           <line num="46" count="0" type="stmt"/>
-          <line num="50" count="0" type="stmt"/>
+          <line num="47" count="0" type="stmt"/>
           <line num="51" count="0" type="stmt"/>
-          <line num="55" count="0" type="stmt"/>
-          <line num="62" count="0" type="stmt"/>
+          <line num="52" count="0" type="stmt"/>
+          <line num="56" count="0" type="stmt"/>
           <line num="63" count="0" type="stmt"/>
           <line num="64" count="0" type="stmt"/>
           <line num="65" count="0" type="stmt"/>
           <line num="66" count="0" type="stmt"/>
-          <line num="68" count="0" type="stmt"/>
-          <line num="81" count="1" type="stmt"/>
-          <line num="92" count="1" type="stmt"/>
+          <line num="67" count="0" type="stmt"/>
+          <line num="69" count="0" type="stmt"/>
+          <line num="82" count="1" type="stmt"/>
+          <line num="94" count="1" type="stmt"/>
         </file>
         <file name="PresentationScreen.js" path="/Users/sjbowman/Desktop/CIS*4250/PublicMobileInterface/App/Containers/PresentationScreen.js">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
